@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\PaymentAppMVC\\PayementMVC.csproj": {}
+    "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\PayementMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\PaymentAppMVC\\PayementMVC.csproj": {
+    "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\PayementMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\PaymentAppMVC\\PayementMVC.csproj",
+        "projectUniqueName": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\PayementMVC.csproj",
         "projectName": "PayementMVC",
-        "projectPath": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\PaymentAppMVC\\PayementMVC.csproj",
+        "projectPath": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\PayementMVC.csproj",
         "packagesPath": "C:\\Users\\OnePoint-bijay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\PaymentAppMVC\\obj\\",
+        "outputPath": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\OnePoint-bijay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,28 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.28, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.27, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"

@@ -1,4 +1,4 @@
-﻿@model PayementMVC.Models.TransactionModel
+﻿@model PayementMVC.Models.TransactionViewModel
 
 @{
     ViewData["Title"] = "Deposit";
@@ -10,7 +10,7 @@
 <h4>Transaction</h4>
 <hr />
 <div class="row">
-    @Html.AntiForgeryToken();
+    @* @Html.AntiForgeryToken(); *@
     <div class="col-md-4">
         <form asp-action="Deposit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>

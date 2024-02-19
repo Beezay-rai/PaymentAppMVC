@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
+using PayementMVC.Interfaces;
 using PayementMVC.Models;
 using PayementMVC.Utility;
 using System.Diagnostics;
@@ -13,10 +14,12 @@ namespace PayementMVC.Controllers
         private readonly ILogger<HomeController> _logger;
 
         IMemoryCache _memoryCache;
-        public HomeController(ILogger<HomeController> logger, IMemoryCache memoryCache)
+        private readonly ITransaction _transaction;
+        public HomeController(ILogger<HomeController> logger, IMemoryCache memoryCache, ITransaction transaction)
         {
             _logger = logger;
             _memoryCache = memoryCache;
+            _transaction = transaction;
         }
 
         public IActionResult Index()
@@ -30,10 +33,14 @@ namespace PayementMVC.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(ErrorViewModel model)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            model.RequestId  = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            return View(model);
         }
+
+
+        //
 
         public IActionResult InsertBalance()
         {
@@ -41,15 +48,21 @@ namespace PayementMVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> InsertBalance(BalanceModel model)
+        public async Task<IActionResult> InsertBalance(BalanceViewModel model)
         {
             try
             {
-                var response = await GlobalVariable.PostMethod("/Transaction/CreateNewBalance", model);
-                if (response.Status)
+                var mvcresponse = await _transaction.CreateNewBalance(model);
+                if (mvcresponse.Status)
                 {
-                    return RedirectToAction("Index");
+                    var response = await GlobalVariable.PostMethod("/Transaction/CreateNewBalance", model);
+                    if (response.Status)
+                    {
+                        return RedirectToAction("Index");
+                    }
                 }
+
+
             }
             catch
             {
@@ -62,125 +75,72 @@ namespace PayementMVC.Controllers
 
         public IActionResult Deposit()
         {
-            return View(new TransactionModel() { TrackingId = Guid.NewGuid().ToString() });
+            return View(new TransactionViewModel() { TrackingId = DateTime.UtcNow.ToString("dd-mm-ss") });
         }
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Deposit(TransactionModel model)
+        public async Task<IActionResult> Deposit(TransactionViewModel model)
         {
             try
             {
-                var response = await GlobalVariable.PostMethod("/Transaction/DepositAmount", model);
-                if (response.Status)
+                var mvcresponse = await _transaction.DeposiAmount(model);
+                if (mvcresponse.Status)
                 {
-                    return RedirectToAction("Index");
-
-                }
-            }
-            catch (Exception ex)
-            {
-
-                _logger.LogInformation($"Error occured {ex.Message}, DateTime : {DateTime.UtcNow}");
-                TempData["msg"] = "Status on Pending";
-                TransactionGETModel abc = new TransactionGETModel()
-                {
-                    Amount = model.Amount,
-                    Status = "Pending",
-                    Username = model.Username,
-                    TrackingId = model.TrackingId,
-                };
-                _memoryCache.CreateEntry("pendingtransaction");
-                _memoryCache.Set("pendingtransaction", abc, DateTime.UtcNow.AddDays(1));
-                return RedirectToAction("GetAllTransaction");
-            }
-
-            return View(model);
-        }
-
-        public async Task<IActionResult> GetAllTransaction()
-        {
-
-            var response = await GlobalVariable.GetMethod("/Transaction/GetAllTransaction");
-            if (response.Status)
-            {
-                var data = JsonConvert.DeserializeObject<List<TransactionGETModel>>(response.Data.ToString());
-
-                var newList = data;
-                var abc = (TransactionGETModel)_memoryCache.Get("pendingtransaction");
-
-
-                if (abc != null && data != null)
-                {
-                    if (data.Count() > 0)
+                    var response = await GlobalVariable.PostMethod("/Transaction/DepositAmount", model);
+                    if (response!= null && response.Status)
                     {
-                        foreach (var item in data.ToList())
-                        {
-
-                            if(item.TrackingId == abc.TrackingId)
-                            {
-                                continue;
-                            }
-                            else
-                            {
-                                if (newList.Any(x=>x.TrackingId == abc.TrackingId))
-                                {
-                                    continue;
-                                }
-                                else
-                                {
-
-                                newList.Add(abc);
-                                }
-                            }
-
-                        }
+                        return RedirectToAction("Index");
 
                     }
                     else
                     {
-                        newList.Add(abc);
+                        await _transaction.SetTransactionStatus(model.TrackingId, "Pending");
+                        ErrorViewModel errorViewModel = new ErrorViewModel()
+                        {
+                            ErrorMessage = response.Message
+                        };
+                        return RedirectToAction("Error", errorViewModel);
                     }
-
                 }
 
-
-
-
-                return View(newList);
-            }
-
-            return View();
-        }
-
-
-        public IActionResult CheckStatus()
-        {
-
-
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CheckStatus(string TrackingId)
-        {
-            ViewBag.Msg = "";
-            try
-            {
-                var abc = (TransactionGETModel)_memoryCache.Get("pendingtransaction");
-
-                var response = await GlobalVariable.PostMethod("/Transaction/CheckStatus", TrackingId.ToString());
-                if (response != null)
-                {
-
-                    ViewBag.Msg = response.Message.ToString();
-                }
 
             }
             catch (Exception ex)
             {
-                ViewBag.Msg = "System Failure";
+                await _transaction.SetTransactionStatus(model.TrackingId, "Pending");
+                _logger.LogInformation($"Error occured {ex.Message}, DateTime : {DateTime.UtcNow}");
+                return RedirectToAction("Index");
             }
-            return View("CheckStatus");
+
+            return View(model);
+        }
+        public async Task<IActionResult> GetAllTransaction()
+        {
+            var data = await _transaction.GetAllTransaction();
+            return View(data);
+        }
+
+        public async Task<ResponseModel> CheckStatus(string trackingId)
+        {
+            var response = new ResponseModel();
+            try
+            {
+                response = await GlobalVariable.PostMethod("/Transaction/CheckStatus", trackingId);
+                if (response != null )
+                {
+                    await _transaction.SetTransactionStatus(trackingId, response.Data.ToString());
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                response.Status = false;
+                response.Message = ex.Message;
+            }
+            return response;
 
         }
     }
