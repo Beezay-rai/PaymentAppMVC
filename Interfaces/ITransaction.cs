@@ -1,5 +1,4 @@
-﻿using PayementMVC.Data;
-using PayementMVC.Models;
+﻿using PayementMVC.Models;
 
 namespace PayementMVC.Interfaces
 {

@@ -4,7 +4,7 @@ using PayementMVC.Models;
 
 namespace PayementMVC.Utility
 {
-    public class MapperProfile:Profile
+    public class MapperProfile : Profile
     {
         public MapperProfile()
         {

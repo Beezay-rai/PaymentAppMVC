@@ -18,13 +18,13 @@ namespace PayementMVC.Data
         public decimal Amount { get; set; }
         public string Username { get; set; }
         public string TrackingId { get; set; }
-        public string Status { get; set; }
+        public string? Status { get; set; }
     }
     public enum TransactionStatus
     {
         Success = 1,
         Pending = 2,
-        Failure = 3
+        Failed = 3
 
     }
 }

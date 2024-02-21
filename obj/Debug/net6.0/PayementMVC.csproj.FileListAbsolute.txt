@@ -504,3 +504,16 @@ C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\obj\Debug\n
 C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\obj\Debug\net6.0\PayementMVC.pdb
 C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\obj\Debug\net6.0\PayementMVC.genruntimeconfig.cache
 C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\obj\Debug\net6.0\ref\PayementMVC.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Polly.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Polly.Core.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Polly.Extensions.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Extensions.Http.Polly.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Polly.Extensions.Http.dll

@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal;
 using PayementMVC.Data;
 using PayementMVC.Interfaces;
 using PayementMVC.Models;
@@ -54,7 +53,6 @@ namespace PayementMVC.Repository
             try
             {
                 var data = _mapper.Map<Transaction>(model);
-                data.Status = TransactionStatus.Success.ToString();
                 await _con.Transaction.AddAsync(data);
                 await _con.SaveChangesAsync();
                 response.Status = true;
@@ -83,7 +81,7 @@ namespace PayementMVC.Repository
 
         }
 
-        public async Task<ResponseModel> SetTransactionStatus(string trackingid,string transactionStatus)
+        public async Task<ResponseModel> SetTransactionStatus(string trackingid, string transactionStatus)
         {
             var response = new ResponseModel();
             try
@@ -97,7 +95,7 @@ namespace PayementMVC.Repository
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 response.Status = false;
                 response.Message = "Error Occured !";

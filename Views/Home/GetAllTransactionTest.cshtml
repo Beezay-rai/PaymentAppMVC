@@ -1,0 +1,79 @@
+﻿@model IEnumerable<PayementMVC.Models.TransactionViewModel>
+
+@{
+    ViewData["Title"] = "GetAllTransaction";
+
+
+}
+
+<h1>GetAllTransaction</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TrackingId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrackingId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                @if (item.Status == "Pending")
+                {
+                    <td>
+
+                        <button onclick="abc('@item.TrackingId')" class="btn btn-outline-primary" asp-action="CheckStatus">Check Status</button>
+                    </td>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts {
+
+    <script>
+        function abc(trackingid) {
+            $.ajax({
+                url: "@Url.Action("CheckStatus")",
+                data: { trackingId: trackingid },
+                success: function (data) {
+                    swal.fire({
+                        title: "Updated",
+                        icon: "success"
+
+
+                    }).then((result) => { location.reload() })
+
+                }
+            })
+        }
+    </script>
+}

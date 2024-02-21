@@ -45,10 +45,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
-                <td>
+                @if(item.Status == "Pending")
+                {
+                    <td>
 
-                    <button onclick="abc('@item.TrackingId')" class="btn btn-outline-primary" asp-action="CheckStatus">Check Status</button>
-                </td>
+                        <button onclick="abc('@item.TrackingId')" class="btn btn-outline-primary" asp-action="CheckStatus">Check Status</button>
+                    </td>
+                }
+               
             </tr>
         }
     </tbody>
