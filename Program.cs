@@ -25,7 +25,9 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddTransient<ITransaction, TransactionRepository>();
 builder.Services.AddScoped<IGlobalVariable, GlobalVariable>();
 builder.Services.AddTransient<ITest, Test>();
-builder.Services.AddHttpClient("myclient").AddPolicyHandler(PollyPolicy.RetryPolicy(logger));
+builder.Services.AddHttpClient("myclient")
+    .AddPolicyHandler(PollyPolicy.RetryPolicy(logger))
+    .AddPolicyHandler(PollyPolicy.CircuitBreakPolicy(logger));
 
 var app = builder.Build();
 
