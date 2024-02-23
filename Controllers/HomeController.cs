@@ -113,9 +113,11 @@ namespace PayementMVC.Controllers
             var data = await _test.GetMethod("/Transaction/GetAllTransaction");
             if (data.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                var test = JsonConvert.DeserializeObject<List<TransactionViewModel>>(data.Content.ToString());
+                var a = await data.Content.ReadFromJsonAsync<ResponseModel>();
+                var test = JsonConvert.DeserializeObject<List<TransactionViewModel>>(a.Data.ToString());
                 return View(test);
             }
+            ViewBag.test = "Failed to fetch data from server !";
             return View(new List<TransactionViewModel>());
         }
         public async Task<IActionResult> GetAllTransaction()
