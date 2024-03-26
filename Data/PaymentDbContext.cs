@@ -10,6 +10,7 @@ namespace PayementMVC.Data
 
         public DbSet<Balance> Balance { get; set; }
         public DbSet<Transaction> Transaction { get; set; }
+        public DbSet<OpenApi> OpenApi { get; set; }
 
     }
 }

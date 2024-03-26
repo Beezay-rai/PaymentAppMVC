@@ -1,0 +1,48 @@
+﻿<div class="card card-body" style="border:1px solid silver">
+    <div class="row" style="margin-left:20px;">
+        <div class="col-md-2">
+            <div class="form-group">
+                <label class="control-label">Method</label>
+                <select class="form-control">
+                    <option value="">GET</option>
+                    <option value="">POST</option>
+                    <option value="">PUT</option>
+                    <option value="">DELETE</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">Name</label>
+                <input type="text" class="form-control" />
+
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="">Description</label>
+                <textarea cols="9" type="text" class="form-control"></textarea>
+            </div>
+        </div>
+        <div style="display:block">
+
+            <div class="parameters">
+                <button type="button" class="btn btn-success btn-sm" onclick="addParameter()">+ Add Parameters</button>
+                <div id="noice">
+                </div>
+            </div>
+            <br />
+            <div class="response">
+                <button type="button" class="btn btn-success btn-sm" onclick="addResponse()">+ Add Response</button>
+                <div id="responseList">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

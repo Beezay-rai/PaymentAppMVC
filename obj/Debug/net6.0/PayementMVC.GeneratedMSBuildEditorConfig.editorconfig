@@ -46,8 +46,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/OpenApi/Configure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlbkFwaVxDb25maWd1cmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/OpenApi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlbkFwaVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/OpenApi/_Api.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlbkFwaVxfQXBpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/OpenApi/_configurepart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlbkFwaVxfY29uZmlndXJlcGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/OpenApi/_Parameter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlbkFwaVxfUGFyYW1ldGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/OpenApi/_Path.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlbkFwaVxfUGF0aC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/OpenApi/_Response.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlbkFwaVxfUmVzcG9uc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/Shared/_AllCss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BbGxDc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/Shared/_AllScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BbGxTY3JpcHRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/OnePoint-bijay/Desktop/Projects/OfficeProject/PaymentAppMVC/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -1,0 +1,160 @@
+﻿@model OpenApiModel
+
+<div class="box d-flex" style="gap:10px;">
+    <div class="card" style="width:20%;">
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header ">
+                    <div style="display:flex; justify-content:space-between">
+                        <h6>Schemas</h6>
+                        <button type="button" class="btn btn-success btn-xs"> + Add</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div style="display:flex; justify-content:space-between">
+                        <h6>Tags <i class="fa fa-arrow-down fa-xs"></i> </h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card" style="width:50%">
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input type="text" class="form-control" asp-for="Name" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Version</label>
+                        <input type="text" class="form-control" asp-for="Version" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="form-control" asp-for="Title" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <textarea type="text" class="form-control" asp-for="Description"></textarea>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="card card-header ">
+                    <div>
+                        <h4>Paths</h4>
+                        <button type="button" class="btn btn-success btn-xs" onclick="addPath()">+ Add</button>
+                    </div>
+                </div>
+                <div id="pathlist">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--Test-->
+    <div class="card d-flex" style="width:40%">
+        <div class="card-body">
+            <h5>@Model.Name</h5>
+            <div class="details">
+                <button class="btn btn-secondary btn-xs">1.0</button>
+                <button class="btn btn-success btn-xs">OAS 3.0.0</button>
+                <p>
+                    @Model.Description
+                </p>
+            </div>
+
+            <div class="apis">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display:flex; justify-content:space-between">
+                            <h6>Tags  </h6>
+                            <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#apibody"><i class="fa fa-arrow-down"></i> </button>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="apibody">
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="card-header" style="border:lightgreen solid 1px">
+                                    <button type="button" class="btn btn-success">GET</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="schemas">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display:flex; justify-content:space-between">
+                            <h6>Schemas  </h6>
+                            <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#schemasBody"><i class="fa fa-arrow-down"></i> </button>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="schemasBody">
+                        <div class="card-body">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function addPath() {
+        $.ajax({
+            url: "@Url.Action("PathPartial")",
+            success: function (data) {
+                $("#pathlist").append(data);
+            }
+        })
+    }
+
+
+    function addParameter() {
+        $.ajax({
+            url: "@Url.Action("ParameterPartial")",
+            success: function (data) {
+                $("#noice").append(data);
+            }
+        })
+    }
+    function addResponse() {
+        $.ajax({
+            url: "@Url.Action("ResponsePartial")",
+            success: function (data) {
+                $("#responseList").append(data);
+            }
+        })
+    }
+
+</script>
+

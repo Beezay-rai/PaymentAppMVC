@@ -1,0 +1,205 @@
+﻿@model OpenApiModel
+@{
+    var a = await Html.PartialAsync("_Path");
+    var raw = Html.Raw(a);
+}
+
+
+<div class="box d-flex" style="gap:10px;">
+    <div class="card" style="width:20%;">
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header ">
+                    <div style="display:flex; justify-content:space-between">
+                        <h6>Schemas</h6>
+                        <button type="button" class="btn btn-success btn-xs"> + Add</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div style="display:flex; justify-content:space-between">
+                        <h6>Tags <i class="fa fa-arrow-down fa-xs"></i> </h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card" style="width:50%">
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input type="text" class="form-control" asp-for="Name" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Version</label>
+                        <input type="text" class="form-control" asp-for="Version" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="form-control" asp-for="Title" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <textarea type="text" class="form-control" asp-for="Description"></textarea>
+
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label">Url</label>
+                        <input type="text" class="form-control" id="url" />
+                        <button type="button" class="btn btn-success btn-md" onclick="test()">Generate</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!--Test-->
+    <div class="card d-flex" style="width:40%">
+        <div class="card-body">
+            <h5>@Model.Name</h5>
+            <div class="details">
+                <button class="btn btn-secondary btn-xs">1.0</button>
+                <button class="btn btn-success btn-xs">OAS 3.0.0</button>
+                <p>
+                    @Model.Description
+                </p>
+            </div>
+
+            <div class="apis">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display:flex; justify-content:space-between">
+                            <h6>Tags  </h6>
+                            <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#apibody"><i class="fa fa-arrow-down"></i> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="apibody">
+                    <div class="card-body" id="listofapi">
+                        <partial name="_Api" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="schemas">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display:flex; justify-content:space-between">
+                            <h6>Schemas  </h6>
+                            <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#schemasBody"><i class="fa fa-arrow-down"></i> </button>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="schemasBody">
+                        <div class="card-body">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    function test() {
+        var a = $("#url").val();
+
+        var header = "";
+
+        var tags = "";
+        var tagswithvalue = [];
+
+        $.ajax({
+            url: "@Url.Action("GetUrlJson")",
+            method: "GET",
+            data: { url: a },
+            success: function (data) {
+                var b = JSON.parse(data);
+
+                $("#listofapi").html("");
+                $.each(b.paths, function (endpoint, endpointBody) {
+                    $.each(endpointBody, function (method, endpointData) {
+                        header = `<div class="collapse" id="apibody">
+                                                            <div class="card-body" id="listofapi">
+                                                                 <div class="card-header d-flex p-0" style="border:silver solid 1px; ">
+                                                        <button type="button" class="btn">
+
+                                                            <span class="btn btn-success ">${method.toUpperCase()}</span>
+                                                            <span class="path text-white "  >
+                                                                    ${endpoint}
+                                                            </span>
+
+
+                                                        </button>
+                                                    </div>
+                                                            </div>
+                                                        </div>`;
+
+                        tags = `<div class="card" ">
+                                                <div class="card-header">
+                                                    <div style="display:flex; justify-content:space-between">
+                                                        <h6>${endpointData.tags}  </h6>
+                                                        <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#apibody"><i class="fa fa-arrow-down"></i> </button>
+                                                    </div>
+                                                </div>
+                                            </div>${header}`;
+                        let mytagtesting = { tagName: endpointData.tags[0], header: header, tagValue: tags };
+
+                        if (tagswithvalue.length > 0) {
+                            const existingTag = tagswithvalue.find(item => item.tagName === mytagtesting.tagName);
+                            if (existingTag) {
+                                existingTag.header += mytagtesting.header;
+                                existingTag.tagValue += mytagtesting.header;
+                            } else {
+                                tagswithvalue.push(mytagtesting);
+                            }
+                        } else {
+                            tagswithvalue.push(mytagtesting);
+                        }
+
+
+                    })
+
+                })
+                $.each(tagswithvalue, function (myarray, myarraydata) {
+
+                    $(".apis").append(myarraydata.tagValue)
+                })
+
+
+
+            },
+            error: function (err) {
+                alert("ERr")
+                console.log(err)
+            }
+        })
+    }
+
+</script>
+
