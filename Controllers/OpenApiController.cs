@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using NuGet.Common;
 using PayementMVC.Interfaces;
 using PayementMVC.Models;
-using System.Xml;
 
 namespace PayementMVC.Controllers
 {
@@ -12,6 +11,7 @@ namespace PayementMVC.Controllers
     {
         private readonly IOpenApi _openapi;
 
+        private readonly MyController _controlelr = new MyController();
         public OpenApiController(IOpenApi openapi)
         {
             _openapi = openapi;
@@ -42,20 +42,151 @@ namespace PayementMVC.Controllers
             HttpClient client = new HttpClient();
             var response = await client.GetAsync(url);
             var abc = await response.Content.ReadAsStringAsync();
-           
+            var a = GenerateViewFromJson(abc);
+
+
             return Json(abc);
         }
+
+
+        public void CheckNested(JObject root, JObject obj, ref Dictionary<string, JObject> myDict)
+        {
+
+            if (obj["$ref"] != null)
+            {
+                var a = obj["$ref"].ToString();
+                var splitted = a.Replace("#/", "").Split("/");
+                var path = string.Join(".", splitted);
+                var modelname2 = path.Substring(path.LastIndexOf(".") + 1);
+                JObject jToken = root.SelectToken(path) as JObject;
+                myDict.Add(modelname2, jToken);
+                CheckNested(root, jToken, ref myDict);
+            }
+
+        }
+
+        public List<SchemaModel> GenerateViewFromJson(string json)
+        {
+            List<SchemaModel> myschemaList = new List<SchemaModel>();
+            var root = JsonConvert.DeserializeObject<JObject>(json);
+            var schemas = root.SelectToken("components.schemas") as JObject;
+            foreach (var model in schemas.Properties())
+            {
+                SchemaModel myschema = new SchemaModel();
+                myschema.ModelName = model.Name;
+
+                var modelProperties = (JObject)model.Value;
+                foreach (var property in modelProperties.Properties())
+                {
+                    if (property.Name == "additionalProperties")
+                    {
+                        continue;
+                    }
+
+                    if (property.Name == "properties")
+                    {
+
+                        var nestedObj = (JObject)property.Value;
+                        foreach (var property2 in nestedObj.Properties())
+                        {
+                            var testignval = JObject.Parse(property2.Value.ToString());
+                            var mydict = new Dictionary<string, JObject>();
+                            CheckNested(root, testignval, ref mydict);
+                            if (mydict.Count > 0)
+                            {
+                                myschema.haha.Add(property2.Name, mydict);
+                            }
+                            else
+                            {
+                                myschema.NestedPropertiesList.Add(property2.Name, testignval);
+
+                            }
+
+
+                        }
+                    }
+                    else
+                    {
+                        switch (property.Type)
+                        {
+                            case JTokenType.Object:
+                            case JTokenType.Array:
+                                break;
+
+                            case JTokenType.Property:
+                                myschema.PropertiesList.Add(property.Name, property.Value.ToString());
+                                break;
+                        }
+                    }
+
+
+
+
+
+
+                }
+                myschemaList.Add(myschema);
+            }
+            return myschemaList;
+
+        }
+
+
+
+        public async Task<IActionResult> PartialViewForSchema(string url)
+        {
+            HttpClient client = new HttpClient();
+            var response = await client.GetAsync(url);
+            var abc = await response.Content.ReadAsStringAsync();
+            var a = GenerateViewFromJson(abc);
+            return PartialView("_SchemaView", a);
+
+        }
+
+        public List<JObject> GetListOfNestedJObject(JObject obj)
+        {
+            var JObjects = new List<JObject>();
+
+            foreach (var property in obj.Properties())
+            {
+                if (property.Value.Type == JTokenType.Object)
+                {
+                    var nestedJObjects = GetListOfNestedJObject((JObject)property.Value);
+
+                    foreach (var nestedJObject in nestedJObjects)
+                    {
+                        JObjects.Add(nestedJObject);
+                    }
+
+
+                }
+
+            }
+
+            return JObjects;
+        }
+        public class SchemaModel
+        {
+            public string ModelName { get; set; }
+            public Dictionary<string, string> PropertiesList { get; set; } = new Dictionary<string, string>();
+            public Dictionary<string, JObject> NestedPropertiesList { get; set; } = new Dictionary<string, JObject>();
+
+            public Dictionary<string, Dictionary<string, JObject>> haha = new Dictionary<string, Dictionary<string, JObject>>();
+
+
+
+        }
+
+
+
+
+
+
 
         public IActionResult ParameterPartial() => PartialView("_Parameter");
         public IActionResult PathPartial() => PartialView("_Path");
         public IActionResult ResponsePartial() => PartialView("_Response");
     }
-    public class testobject
-    {
-        public object components { get; set; }
-        public object info { get; set; }
-        public object openapi { get; set; }
-        public List<object> paths { get; set; }
-    }
+
 
 }

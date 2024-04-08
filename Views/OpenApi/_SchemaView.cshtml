@@ -1,0 +1,79 @@
+﻿@using Newtonsoft.Json.Linq
+@using static PayementMVC.Controllers.OpenApiController
+@model IEnumerable<SchemaModel>
+
+
+@foreach (var item in Model)
+{
+    <div class="card" style="border:dotted silver 1px">
+        <div class="card-header">
+            <button type="button" class="btn text-white " onclick="openCardCollapse(this)">@item.ModelName</button>
+
+
+
+        </div>
+        <div class="card-body" width="100%">
+            <div class="collapse">
+                <table class="table ">
+                    <tbody>
+                        @foreach (var property in item.PropertiesList)
+                        {
+                            <tr>
+                                <td>@property.Key</td>
+                                <td>@property.Value</td>
+                            </tr>
+                        }
+                        @foreach (var property in item.NestedPropertiesList)
+                        {
+                            <tr>
+                                <td>
+                                    @property.Key:
+
+                                </td>
+                                <td>
+                                    @foreach (var nestedprop in property.Value.Properties())
+                                    {
+                                        if (nestedprop.Name == "properties")
+                                        {
+                                            var nestedpropobj = JObject.Parse(nestedprop.Value.ToString());
+                                            foreach (var nestedobjprops in nestedpropobj.Properties())
+                                            {
+                                                <p> @nestedobjprops.Name: @nestedobjprops.Value</p>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <p> @nestedprop.Name: @nestedprop.Value</p>
+
+                                        }
+
+                                    }
+
+                                </td>
+
+                            </tr>
+                        }
+                        @if (item.haha.Values.Count() > 0)
+                        {
+                            @foreach (var nestedobj in item.haha)
+                            {
+                                <tr>
+                                    <td>@nestedobj.Key </td>
+                                    @foreach (var nestedval in nestedobj.Value)
+                                    {
+                                        <td>@nestedval.Key <p> @nestedval.Value</p> </td>
+                                       
+                                    }
+                                   
+                                </tr>
+                            }
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+}

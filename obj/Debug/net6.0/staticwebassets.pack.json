@@ -8221,6 +8221,2334 @@
       "PackagePath": "staticwebassets\\AdminLte\\plugins\\uplot\\uPlot.min.css"
     },
     {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\.editorconfig",
+      "PackagePath": "staticwebassets\\codemirror\\.editorconfig"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\.gitattributes",
+      "PackagePath": "staticwebassets\\codemirror\\.gitattributes"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\.gitignore",
+      "PackagePath": "staticwebassets\\codemirror\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\.npmignore",
+      "PackagePath": "staticwebassets\\codemirror\\.npmignore"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\AUTHORS",
+      "PackagePath": "staticwebassets\\codemirror"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\codemirror\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\CONTRIBUTING.md",
+      "PackagePath": "staticwebassets\\codemirror\\CONTRIBUTING.md"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\LICENSE",
+      "PackagePath": "staticwebassets\\codemirror"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\README.md",
+      "PackagePath": "staticwebassets\\codemirror\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\comment\\comment.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\comment\\comment.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\comment\\continuecomment.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\comment\\continuecomment.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\dialog\\dialog.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\dialog\\dialog.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\dialog\\dialog.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\dialog\\dialog.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\display\\autorefresh.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\display\\autorefresh.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\display\\fullscreen.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\display\\fullscreen.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\display\\fullscreen.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\display\\fullscreen.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\display\\panel.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\display\\panel.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\display\\placeholder.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\display\\placeholder.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\display\\rulers.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\display\\rulers.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\edit\\closebrackets.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\edit\\closebrackets.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\edit\\closetag.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\edit\\closetag.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\edit\\continuelist.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\edit\\continuelist.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\edit\\matchbrackets.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\edit\\matchbrackets.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\edit\\matchtags.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\edit\\matchtags.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\edit\\trailingspace.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\edit\\trailingspace.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\fold\\brace-fold.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\fold\\brace-fold.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\fold\\comment-fold.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\fold\\comment-fold.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\fold\\foldcode.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\fold\\foldcode.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\fold\\foldgutter.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\fold\\foldgutter.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\fold\\foldgutter.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\fold\\foldgutter.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\fold\\indent-fold.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\fold\\indent-fold.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\fold\\markdown-fold.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\fold\\markdown-fold.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\fold\\xml-fold.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\fold\\xml-fold.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\hint\\anyword-hint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\hint\\anyword-hint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\hint\\css-hint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\hint\\css-hint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\hint\\html-hint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\hint\\html-hint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\hint\\javascript-hint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\hint\\javascript-hint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\hint\\show-hint.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\hint\\show-hint.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\hint\\show-hint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\hint\\show-hint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\hint\\sql-hint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\hint\\sql-hint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\hint\\xml-hint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\hint\\xml-hint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\lint\\coffeescript-lint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\lint\\coffeescript-lint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\lint\\css-lint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\lint\\css-lint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\lint\\html-lint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\lint\\html-lint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\lint\\javascript-lint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\lint\\javascript-lint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\lint\\json-lint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\lint\\json-lint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\lint\\lint.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\lint\\lint.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\lint\\lint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\lint\\lint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\lint\\yaml-lint.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\lint\\yaml-lint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\merge\\merge.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\merge\\merge.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\merge\\merge.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\merge\\merge.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\mode\\loadmode.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\mode\\loadmode.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\mode\\multiplex.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\mode\\multiplex.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\mode\\multiplex_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\mode\\multiplex_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\mode\\overlay.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\mode\\overlay.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\mode\\simple.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\mode\\simple.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\runmode\\colorize.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\runmode\\colorize.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\runmode\\runmode.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\runmode\\runmode.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\scroll\\annotatescrollbar.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\scroll\\annotatescrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\scroll\\scrollpastend.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\scroll\\scrollpastend.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\scroll\\simplescrollbars.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\scroll\\simplescrollbars.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\scroll\\simplescrollbars.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\scroll\\simplescrollbars.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\search\\jump-to-line.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\search\\jump-to-line.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\search\\match-highlighter.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\search\\match-highlighter.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\search\\matchesonscrollbar.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\search\\matchesonscrollbar.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\search\\matchesonscrollbar.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\search\\matchesonscrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\search\\search.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\search\\search.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\search\\searchcursor.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\search\\searchcursor.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\selection\\active-line.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\selection\\active-line.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\selection\\mark-selection.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\selection\\mark-selection.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\selection\\selection-pointer.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\selection\\selection-pointer.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\tern\\tern.css",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\tern\\tern.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\tern\\tern.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\tern\\tern.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\tern\\worker.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\tern\\worker.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\addon\\wrap\\hardwrap.js",
+      "PackagePath": "staticwebassets\\codemirror\\addon\\wrap\\hardwrap.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\bin\\authors.sh",
+      "PackagePath": "staticwebassets\\codemirror\\bin\\authors.sh"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\bin\\lint",
+      "PackagePath": "staticwebassets\\codemirror\\bin"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\bin\\release",
+      "PackagePath": "staticwebassets\\codemirror\\bin"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\bin\\source-highlight",
+      "PackagePath": "staticwebassets\\codemirror\\bin"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\bin\\upload-release.js",
+      "PackagePath": "staticwebassets\\codemirror\\bin\\upload-release.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\activeline.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\activeline.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\anywordhint.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\anywordhint.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\bidi.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\bidi.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\btree.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\btree.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\buffers.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\buffers.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\changemode.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\changemode.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\closebrackets.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\closebrackets.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\closetag.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\closetag.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\complete.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\complete.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\emacs.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\emacs.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\folding.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\folding.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\fullscreen.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\fullscreen.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\hardwrap.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\hardwrap.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\html5complete.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\html5complete.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\indentwrap.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\indentwrap.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\lint.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\lint.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\loadmode.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\loadmode.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\marker.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\marker.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\markselection.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\markselection.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\matchhighlighter.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\matchhighlighter.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\matchtags.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\matchtags.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\merge.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\merge.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\multiplex.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\multiplex.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\mustache.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\mustache.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\panel.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\panel.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\placeholder.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\placeholder.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\preview.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\preview.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\requirejs.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\requirejs.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\resize.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\resize.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\rulers.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\rulers.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\runmode-standalone.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\runmode-standalone.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\runmode.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\runmode.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\search.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\search.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\simplemode.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\simplemode.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\simplescrollbars.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\simplescrollbars.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\spanaffectswrapping_shim.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\spanaffectswrapping_shim.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\sublime.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\sublime.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\tern.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\tern.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\theme.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\theme.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\trailingspace.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\trailingspace.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\variableheight.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\variableheight.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\vim.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\vim.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\visibletabs.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\visibletabs.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\widget.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\widget.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\demo\\xmlcomplete.html",
+      "PackagePath": "staticwebassets\\codemirror\\demo\\xmlcomplete.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\activebookmark.js",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\activebookmark.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\docs.css",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\docs.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\internals.html",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\internals.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\logo.png",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\logo.svg",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\manual.html",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\manual.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\realworld.html",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\realworld.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\releases.html",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\releases.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\reporting.html",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\reporting.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\source_sans.woff",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\source_sans.woff"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\upgrade_v2.2.html",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\upgrade_v2.2.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\upgrade_v3.html",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\upgrade_v3.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\upgrade_v4.html",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\upgrade_v4.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\doc\\yinyang.png",
+      "PackagePath": "staticwebassets\\codemirror\\doc\\yinyang.png"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\keymap\\emacs.js",
+      "PackagePath": "staticwebassets\\codemirror\\keymap\\emacs.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\keymap\\sublime.js",
+      "PackagePath": "staticwebassets\\codemirror\\keymap\\sublime.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\lib\\codemirror.css",
+      "PackagePath": "staticwebassets\\codemirror\\lib\\codemirror.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\apl\\apl.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\apl\\apl.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\apl\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\apl\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\asciiarmor\\asciiarmor.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\asciiarmor\\asciiarmor.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\asciiarmor\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\asciiarmor\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\asn.1\\asn.1.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\asn.1\\asn.1.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\asn.1\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\asn.1\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\asterisk\\asterisk.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\asterisk\\asterisk.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\asterisk\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\asterisk\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\brainfuck\\brainfuck.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\brainfuck\\brainfuck.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\brainfuck\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\brainfuck\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\clike\\clike.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\clike\\clike.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\clike\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\clike\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\clike\\scala.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\clike\\scala.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\clike\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\clike\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\clojure\\clojure.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\clojure\\clojure.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\clojure\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\clojure\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\clojure\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\clojure\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\cmake\\cmake.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\cmake\\cmake.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\cmake\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\cmake\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\cobol\\cobol.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\cobol\\cobol.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\cobol\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\cobol\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\coffeescript\\coffeescript.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\coffeescript\\coffeescript.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\coffeescript\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\coffeescript\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\commonlisp\\commonlisp.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\commonlisp\\commonlisp.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\commonlisp\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\commonlisp\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\crystal\\crystal.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\crystal\\crystal.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\crystal\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\crystal\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\css.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\css.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\gss.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\gss.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\gss_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\gss_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\less.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\less.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\less_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\less_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\scss.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\scss.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\scss_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\scss_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\css\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\css\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\cypher\\cypher.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\cypher\\cypher.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\cypher\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\cypher\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\cypher\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\cypher\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\d\\d.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\d\\d.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\d\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\d\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\d\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\d\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dart\\dart.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dart\\dart.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dart\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dart\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\diff\\diff.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\diff\\diff.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\diff\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\diff\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\django\\django.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\django\\django.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\django\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\django\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dockerfile\\dockerfile.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dockerfile\\dockerfile.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dockerfile\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dockerfile\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dockerfile\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dockerfile\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dtd\\dtd.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dtd\\dtd.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dtd\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dtd\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dylan\\dylan.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dylan\\dylan.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dylan\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dylan\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\dylan\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\dylan\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ebnf\\ebnf.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ebnf\\ebnf.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ebnf\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ebnf\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ecl\\ecl.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ecl\\ecl.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ecl\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ecl\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\eiffel\\eiffel.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\eiffel\\eiffel.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\eiffel\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\eiffel\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\elm\\elm.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\elm\\elm.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\elm\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\elm\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\erlang\\erlang.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\erlang\\erlang.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\erlang\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\erlang\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\factor\\factor.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\factor\\factor.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\factor\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\factor\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\fcl\\fcl.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\fcl\\fcl.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\fcl\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\fcl\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\forth\\forth.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\forth\\forth.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\forth\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\forth\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\fortran\\fortran.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\fortran\\fortran.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\fortran\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\fortran\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\gas\\gas.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\gas\\gas.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\gas\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\gas\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\gfm\\gfm.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\gfm\\gfm.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\gfm\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\gfm\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\gfm\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\gfm\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\gherkin\\gherkin.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\gherkin\\gherkin.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\gherkin\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\gherkin\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\go\\go.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\go\\go.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\go\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\go\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\groovy\\groovy.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\groovy\\groovy.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\groovy\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\groovy\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haml\\haml.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haml\\haml.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haml\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haml\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haml\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haml\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\handlebars\\handlebars.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\handlebars\\handlebars.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\handlebars\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\handlebars\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haskell-literate\\haskell-literate.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haskell-literate\\haskell-literate.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haskell-literate\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haskell-literate\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haskell\\haskell.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haskell\\haskell.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haskell\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haskell\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haxe\\haxe.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haxe\\haxe.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\haxe\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\haxe\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\htmlembedded\\htmlembedded.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\htmlembedded\\htmlembedded.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\htmlembedded\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\htmlembedded\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\htmlmixed\\htmlmixed.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\htmlmixed\\htmlmixed.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\htmlmixed\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\htmlmixed\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\http\\http.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\http\\http.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\http\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\http\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\idl\\idl.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\idl\\idl.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\idl\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\idl\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\javascript\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\javascript\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\javascript\\javascript.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\javascript\\javascript.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\javascript\\json-ld.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\javascript\\json-ld.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\javascript\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\javascript\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\javascript\\typescript.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\javascript\\typescript.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\jinja2\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\jinja2\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\jinja2\\jinja2.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\jinja2\\jinja2.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\jsx\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\jsx\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\jsx\\jsx.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\jsx\\jsx.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\jsx\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\jsx\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\julia\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\julia\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\julia\\julia.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\julia\\julia.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\livescript\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\livescript\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\livescript\\livescript.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\livescript\\livescript.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\lua\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\lua\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\lua\\lua.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\lua\\lua.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\markdown\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\markdown\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\markdown\\markdown.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\markdown\\markdown.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\markdown\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\markdown\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mathematica\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mathematica\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mathematica\\mathematica.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mathematica\\mathematica.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mbox\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mbox\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mbox\\mbox.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mbox\\mbox.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\meta.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\meta.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mirc\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mirc\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mirc\\mirc.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mirc\\mirc.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mllike\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mllike\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mllike\\mllike.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mllike\\mllike.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\modelica\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\modelica\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\modelica\\modelica.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\modelica\\modelica.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mscgen\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mscgen\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mscgen\\mscgen.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mscgen\\mscgen.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mscgen\\mscgen_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mscgen\\mscgen_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mscgen\\msgenny_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mscgen\\msgenny_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mscgen\\xu_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mscgen\\xu_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mumps\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mumps\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\mumps\\mumps.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\mumps\\mumps.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\nginx\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\nginx\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\nginx\\nginx.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\nginx\\nginx.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\nsis\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\nsis\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\nsis\\nsis.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\nsis\\nsis.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ntriples\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ntriples\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ntriples\\ntriples.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ntriples\\ntriples.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\octave\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\octave\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\octave\\octave.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\octave\\octave.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\oz\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\oz\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\oz\\oz.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\oz\\oz.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\pascal\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\pascal\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\pascal\\pascal.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\pascal\\pascal.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\pegjs\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\pegjs\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\pegjs\\pegjs.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\pegjs\\pegjs.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\perl\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\perl\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\perl\\perl.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\perl\\perl.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\php\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\php\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\php\\php.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\php\\php.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\php\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\php\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\pig\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\pig\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\pig\\pig.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\pig\\pig.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\powershell\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\powershell\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\powershell\\powershell.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\powershell\\powershell.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\powershell\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\powershell\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\properties\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\properties\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\properties\\properties.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\properties\\properties.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\protobuf\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\protobuf\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\protobuf\\protobuf.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\protobuf\\protobuf.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\pug\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\pug\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\pug\\pug.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\pug\\pug.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\puppet\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\puppet\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\puppet\\puppet.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\puppet\\puppet.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\python\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\python\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\python\\python.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\python\\python.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\python\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\python\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\q\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\q\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\q\\q.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\q\\q.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\r\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\r\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\r\\r.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\r\\r.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\rpm\\changes\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\rpm\\changes\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\rpm\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\rpm\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\rpm\\rpm.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\rpm\\rpm.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\rst\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\rst\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\rst\\rst.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\rst\\rst.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ruby\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ruby\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ruby\\ruby.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ruby\\ruby.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ruby\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ruby\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\rust\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\rust\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\rust\\rust.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\rust\\rust.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\rust\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\rust\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sas\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sas\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sas\\sas.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sas\\sas.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sass\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sass\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sass\\sass.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sass\\sass.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sass\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sass\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\scheme\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\scheme\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\scheme\\scheme.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\scheme\\scheme.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\shell\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\shell\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\shell\\shell.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\shell\\shell.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\shell\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\shell\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sieve\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sieve\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sieve\\sieve.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sieve\\sieve.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\slim\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\slim\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\slim\\slim.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\slim\\slim.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\slim\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\slim\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\smalltalk\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\smalltalk\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\smalltalk\\smalltalk.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\smalltalk\\smalltalk.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\smarty\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\smarty\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\smarty\\smarty.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\smarty\\smarty.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\solr\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\solr\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\solr\\solr.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\solr\\solr.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\soy\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\soy\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\soy\\soy.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\soy\\soy.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\soy\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\soy\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sparql\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sparql\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sparql\\sparql.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sparql\\sparql.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\spreadsheet\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\spreadsheet\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\spreadsheet\\spreadsheet.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\spreadsheet\\spreadsheet.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sql\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sql\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\sql\\sql.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\sql\\sql.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\stex\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\stex\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\stex\\stex.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\stex\\stex.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\stex\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\stex\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\stylus\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\stylus\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\stylus\\stylus.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\stylus\\stylus.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\swift\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\swift\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\swift\\swift.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\swift\\swift.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\swift\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\swift\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tcl\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tcl\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tcl\\tcl.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tcl\\tcl.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\textile\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\textile\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\textile\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\textile\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\textile\\textile.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\textile\\textile.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tiddlywiki\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tiddlywiki\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tiddlywiki\\tiddlywiki.css",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tiddlywiki\\tiddlywiki.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tiddlywiki\\tiddlywiki.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tiddlywiki\\tiddlywiki.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tiki\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tiki\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tiki\\tiki.css",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tiki\\tiki.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tiki\\tiki.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tiki\\tiki.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\toml\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\toml\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\toml\\toml.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\toml\\toml.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tornado\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tornado\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\tornado\\tornado.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\tornado\\tornado.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\troff\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\troff\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\troff\\troff.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\troff\\troff.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ttcn-cfg\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ttcn-cfg\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ttcn-cfg\\ttcn-cfg.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ttcn-cfg\\ttcn-cfg.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ttcn\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ttcn\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\ttcn\\ttcn.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\ttcn\\ttcn.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\turtle\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\turtle\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\turtle\\turtle.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\turtle\\turtle.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\twig\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\twig\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\twig\\twig.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\twig\\twig.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\vb\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\vb\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\vb\\vb.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\vb\\vb.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\vbscript\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\vbscript\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\vbscript\\vbscript.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\vbscript\\vbscript.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\velocity\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\velocity\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\velocity\\velocity.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\velocity\\velocity.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\verilog\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\verilog\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\verilog\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\verilog\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\verilog\\verilog.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\verilog\\verilog.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\vhdl\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\vhdl\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\vhdl\\vhdl.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\vhdl\\vhdl.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\vue\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\vue\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\vue\\vue.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\vue\\vue.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\wast\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\wast\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\wast\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\wast\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\wast\\wast.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\wast\\wast.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\webidl\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\webidl\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\webidl\\webidl.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\webidl\\webidl.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\xml\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\xml\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\xml\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\xml\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\xml\\xml.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\xml\\xml.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\xquery\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\xquery\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\xquery\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\xquery\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\xquery\\xquery.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\xquery\\xquery.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\yacas\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\yacas\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\yacas\\yacas.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\yacas\\yacas.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\yaml-frontmatter\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\yaml-frontmatter\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\yaml-frontmatter\\yaml-frontmatter.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\yaml-frontmatter\\yaml-frontmatter.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\yaml\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\yaml\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\yaml\\yaml.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\yaml\\yaml.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\z80\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\z80\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\mode\\z80\\z80.js",
+      "PackagePath": "staticwebassets\\codemirror\\mode\\z80\\z80.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\package.json",
+      "PackagePath": "staticwebassets\\codemirror\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\rollup.config.js",
+      "PackagePath": "staticwebassets\\codemirror\\rollup.config.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\addon\\runmode\\codemirror-standalone.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\addon\\runmode\\codemirror-standalone.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\addon\\runmode\\codemirror.node.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\addon\\runmode\\codemirror.node.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\addon\\runmode\\runmode-standalone.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\addon\\runmode\\runmode-standalone.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\addon\\runmode\\runmode.node.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\addon\\runmode\\runmode.node.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\codemirror.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\codemirror.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\Display.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\Display.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\focus.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\focus.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\gutters.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\gutters.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\highlight_worker.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\highlight_worker.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\line_numbers.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\line_numbers.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\mode_state.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\mode_state.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\operations.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\operations.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\scroll_events.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\scroll_events.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\scrollbars.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\scrollbars.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\scrolling.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\scrolling.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\selection.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\selection.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\update_display.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\update_display.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\update_line.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\update_line.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\update_lines.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\update_lines.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\display\\view_tracking.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\display\\view_tracking.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\CodeMirror.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\CodeMirror.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\commands.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\commands.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\deleteNearSelection.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\deleteNearSelection.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\drop_events.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\drop_events.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\fromTextArea.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\fromTextArea.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\global_events.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\global_events.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\key_events.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\key_events.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\legacy.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\legacy.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\main.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\methods.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\methods.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\mouse_events.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\mouse_events.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\options.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\options.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\edit\\utils.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\edit\\utils.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\input\\ContentEditableInput.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\input\\ContentEditableInput.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\input\\TextareaInput.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\input\\TextareaInput.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\input\\indent.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\input\\indent.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\input\\input.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\input\\input.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\input\\keymap.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\input\\keymap.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\input\\keynames.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\input\\keynames.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\input\\movement.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\input\\movement.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\line\\highlight.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\line\\highlight.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\line\\line_data.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\line\\line_data.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\line\\pos.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\line\\pos.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\line\\saw_special_spans.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\line\\saw_special_spans.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\line\\spans.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\line\\spans.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\line\\utils_line.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\line\\utils_line.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\measurement\\position_measurement.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\measurement\\position_measurement.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\measurement\\widgets.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\measurement\\widgets.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\Doc.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\Doc.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\change_measurement.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\change_measurement.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\changes.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\changes.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\chunk.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\chunk.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\document_data.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\document_data.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\history.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\history.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\line_widget.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\line_widget.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\mark_text.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\mark_text.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\selection.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\selection.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\model\\selection_updates.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\model\\selection_updates.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\modes.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\modes.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\util\\StringStream.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\util\\StringStream.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\util\\bidi.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\util\\bidi.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\util\\browser.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\util\\browser.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\util\\dom.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\util\\dom.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\util\\event.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\util\\event.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\util\\feature_detection.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\util\\feature_detection.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\util\\misc.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\util\\misc.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\src\\util\\operation_group.js",
+      "PackagePath": "staticwebassets\\codemirror\\src\\util\\operation_group.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\annotatescrollbar.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\annotatescrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\comment_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\comment_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\contenteditable_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\contenteditable_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\doc_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\doc_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\driver.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\driver.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\emacs_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\emacs_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\html-hint-test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\html-hint-test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\index.html",
+      "PackagePath": "staticwebassets\\codemirror\\test\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\lint.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\lint.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\mode_test.css",
+      "PackagePath": "staticwebassets\\codemirror\\test\\mode_test.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\mode_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\mode_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\multi_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\multi_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\run.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\run.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\scroll_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\scroll_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\search_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\search_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\sql-hint-test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\sql-hint-test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\sublime_test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\sublime_test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\test\\test.js",
+      "PackagePath": "staticwebassets\\codemirror\\test\\test.js"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\3024-day.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\3024-day.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\3024-night.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\3024-night.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\abbott.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\abbott.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\abcdef.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\abcdef.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\ambiance-mobile.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\ambiance-mobile.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\ambiance.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\ambiance.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\ayu-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\ayu-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\ayu-mirage.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\ayu-mirage.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\base16-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\base16-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\base16-light.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\base16-light.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\bespin.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\bespin.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\blackboard.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\blackboard.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\cobalt.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\cobalt.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\colorforth.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\colorforth.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\darcula.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\darcula.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\dracula.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\dracula.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\duotone-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\duotone-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\duotone-light.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\duotone-light.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\eclipse.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\eclipse.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\elegant.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\elegant.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\erlang-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\erlang-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\gruvbox-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\gruvbox-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\hopscotch.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\hopscotch.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\icecoder.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\icecoder.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\idea.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\idea.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\isotope.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\isotope.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\juejin.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\juejin.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\lesser-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\lesser-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\liquibyte.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\liquibyte.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\lucario.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\lucario.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\material-darker.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\material-darker.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\material-ocean.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\material-ocean.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\material-palenight.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\material-palenight.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\material.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\material.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\mbo.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\mbo.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\mdn-like.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\mdn-like.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\midnight.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\midnight.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\monokai.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\monokai.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\moxer.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\moxer.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\neat.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\neat.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\neo.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\neo.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\night.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\night.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\nord.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\nord.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\oceanic-next.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\oceanic-next.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\panda-syntax.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\panda-syntax.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\paraiso-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\paraiso-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\paraiso-light.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\paraiso-light.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\pastel-on-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\pastel-on-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\railscasts.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\railscasts.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\rubyblue.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\rubyblue.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\seti.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\seti.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\shadowfox.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\shadowfox.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\solarized.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\solarized.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\ssms.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\ssms.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\the-matrix.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\the-matrix.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\tomorrow-night-bright.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\tomorrow-night-bright.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\tomorrow-night-eighties.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\tomorrow-night-eighties.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\ttcn.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\ttcn.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\twilight.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\twilight.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\vibrant-ink.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\vibrant-ink.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\xq-dark.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\xq-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\xq-light.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\xq-light.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\yeti.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\yeti.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\yonce.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\yonce.css"
+    },
+    {
+      "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\codemirror\\theme\\zenburn.css",
+      "PackagePath": "staticwebassets\\codemirror\\theme\\zenburn.css"
+    },
+    {
       "Id": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

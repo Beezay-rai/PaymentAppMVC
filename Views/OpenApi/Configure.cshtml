@@ -63,7 +63,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="control-label">Url</label>
-                        <input type="text" class="form-control" id="url" />
+                        <input type="text" class="form-control" id="url" value="https://localhost:7203/swagger/v1/swagger.json" />
                         <button type="button" class="btn btn-success btn-md" onclick="test()">Generate</button>
 
                     </div>
@@ -95,12 +95,13 @@
                             <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#apibody"><i class="fa fa-arrow-down"></i> </button>
                         </div>
                     </div>
-                </div>
-                <div class="collapse" id="apibody">
-                    <div class="card-body" id="listofapi">
-                        <partial name="_Api" />
+                    <div class="collapse" id="apibody">
+                        <div class="card-body" id="listofapi">
+                            <partial name="_Api" />
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="schemas">
@@ -113,93 +114,543 @@
                     </div>
 
                     <div class="collapse" id="schemasBody">
-                        <div class="card-body">
+                        <div class="card-body" id="schemalist">
                         </div>
                     </div>
 
                 </div>
             </div>
+            <div class="testcodemirror">
+            </div>
         </div>
     </div>
 </div>
 
-<script>
+
+@section Scripts {
 
 
-    function test() {
-        var a = $("#url").val();
 
-        var header = "";
-
-        var tags = "";
-        var tagswithvalue = [];
-
-        $.ajax({
-            url: "@Url.Action("GetUrlJson")",
-            method: "GET",
-            data: { url: a },
-            success: function (data) {
-                var b = JSON.parse(data);
-
-                $("#listofapi").html("");
-                $.each(b.paths, function (endpoint, endpointBody) {
-                    $.each(endpointBody, function (method, endpointData) {
-                        header = `<div class="collapse" id="apibody">
-                                                            <div class="card-body" id="listofapi">
-                                                                 <div class="card-header d-flex p-0" style="border:silver solid 1px; ">
-                                                        <button type="button" class="btn">
-
-                                                            <span class="btn btn-success ">${method.toUpperCase()}</span>
-                                                            <span class="path text-white "  >
-                                                                    ${endpoint}
-                                                            </span>
+    <script type="text/javascript">
+        window.onload = function () {
+            test();
+        };
 
 
-                                                        </button>
-                                                    </div>
-                                                            </div>
-                                                        </div>`;
 
-                        tags = `<div class="card" ">
-                                                <div class="card-header">
-                                                    <div style="display:flex; justify-content:space-between">
-                                                        <h6>${endpointData.tags}  </h6>
-                                                        <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#apibody"><i class="fa fa-arrow-down"></i> </button>
-                                                    </div>
-                                                </div>
-                                            </div>${header}`;
-                        let mytagtesting = { tagName: endpointData.tags[0], header: header, tagValue: tags };
+        var editor = CodeMirror(document.querySelector(".testcodemirror"), {
+            value: "function myScript()\n{console.log(100);}\n",
+            mode: "javascript",
+            theme: "dracula"
+        });
 
-                        if (tagswithvalue.length > 0) {
-                            const existingTag = tagswithvalue.find(item => item.tagName === mytagtesting.tagName);
-                            if (existingTag) {
-                                existingTag.header += mytagtesting.header;
-                                existingTag.tagValue += mytagtesting.header;
-                            } else {
-                                tagswithvalue.push(mytagtesting);
+
+
+        function GetSchemaView() {
+            var tagswithvalue = [];
+
+            $.ajax({
+                url: "@Url.Action("PartialViewForSchema")",
+                method: "GET",
+                data: { url: $("#url").val() },
+                success: function (data) {
+                    $("#schemalist").html(data);
+                }
+            })
+        }
+
+        function test() {
+            var tagswithvalue = [];
+
+            $.ajax({
+                url: "@Url.Action("GetUrlJson")",
+                method: "GET",
+                data: { url: $("#url").val() },
+                success: function (data) {
+                    var jsonData = JSON.parse(data);
+                    // GetSchemaView();
+                    $("#listofapi").html("");
+
+                    //Generating Path from Json
+                    $.each(jsonData.paths, function (endpoint, endpointBody) {
+                        $.each(endpointBody, function (method, endpointData) {
+                            var paramHead = "";
+                            var parameterList = "";
+
+                            //Parameters for Endpoint
+                            if (endpointData.hasOwnProperty("parameters")) {
+                                paramHead = ` <tr>
+                                                    <th>Name</th>
+                                                    <th>Description</th>
+                                                   </tr>`;
+                                $.each(endpointData.parameters, function (parameterIndex, parameterDetail) {
+                                    parameterList += `<tr>
+                                                           <td>${parameterDetail.name}<br/>(${parameterDetail.in})</td>
+                                                           <td><input class="form-control" placeholder="${parameterDetail.name}"/></td>
+                                                         </tr>`;
+                                });
                             }
-                        } else {
-                            tagswithvalue.push(mytagtesting);
-                        }
+                            else {
+                                paramHead = "<tr><th>No Parameters</th></tr>"
+                            }
+
+                            //Request Body for Endpoint
+                            var requestBodyHtml = "";
+                            if (endpointData.hasOwnProperty("requestBody")) {
+
+                                var exampleRequestBody = "";
+                                var schemaRequestBody = "";
+                                var contentDropdownOptions = "";
+                                $.each(endpointData.requestBody.content, function (contentName, contentValue) {
+                                    contentDropdownOptions += `<option value="${contentName}"> ${contentName} </option>`;
+                                    if (contentValue.schema.hasOwnProperty("$ref")) {
+
+                                        var objFromPath = GenerateObjFromPath(jsonData, contentValue.schema.$ref);
+                                        var objFromNested = checkNestedObject(jsonData, objFromPath)
+
+                                        var requestbodyJSON = {};
+                                        $.each(objFromPath, function (modelName, modelDetails) {
+                                            $.each(modelDetails.properties, function (propnName, propValue) {
+                                                if (propValue.hasOwnProperty('type'))
+                                                {
+
+                                                    switch (propValue.type) {
+                                                        case "integer":
+                                                            requestbodyJSON[propnName] = 0;
+                                                            break;
+                                                        case "string":
+                                                            requestbodyJSON[propnName] = "string";
+                                                            break;
+                                                        case "number":
+                                                            requestbodyJSON[propnName] = 0;
+                                                            break;
+                                                        case "array":
+                                                            requestbodyJSON[propnName] = [];
+                                                            break;
+                                                       
+
+                                                    }
+                                                }
+                                                if(propValue.hasOwnProperty("$ref")){
+                                                    requestbodyJSON[propnName] = RecursiveRequestBody(jsonData, propValue.$ref);
+                                                }
+                                                
+                                             
+
+                                            })
+                                        })
+
+                                        //Schema for examplerequestBody
+                                        exampleRequestBody = JSON.stringify(requestbodyJSON, null, 2);
+
+                                        var schemaJsonForRequestBody = ReplaceRefWithActualObject(jsonData, objFromPath);
+                                        
+                                        schemaRequestBody = JSON.stringify(schemaJsonForRequestBody, null, 2);
+
+                                    }
+                                    else {
 
 
+                                        $.each(contentValue.schema, function (schemaName, schemaValue) {
+                                            exampleRequestBody = schemaValue;
+                                            schemaRequestBody = schemaValue;
+                                        });
+                                    }
+                                });
+                                requestBodyHtml = `<div class="card">
+                                                            <div class="card-header">
+                                                                Response Body
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="wrapper" style="display:flex; justify-content:space-between">
+
+                                                                          <div class="listForExampleSchema" >
+                                                                       <ul class="tab" style="display:flex" >
+                                                                                 <li class="tabitem "style="list-style-type:none;" ><button class="btn text-white p-0" type="button"onClick="toggleExampleSchema(this,false)"> Example  |</button></li>
+                                                                                           <li class="tabitem "style="list-style-type:none;" ><button class="btn text-white p-0" type="button" onClick="toggleExampleSchema(this,true)">Schema</button> </li>
+                                                                               </ul>
+                                                                       </div>
+
+                                                                       <div class="dropdownOptions">
+                                                                        <select class="form-control">
+                                                                                ${contentDropdownOptions}
+                                                                        </select>
+                                                                       </div>
+                                                                </div>
+                                                             
+                                                                         
+                                                               <div class="Example">
+
+                                                                   <textarea readonly class="code codeMirror">${exampleRequestBody}</textarea>
+                                                               </div>
+                                                               <div class="Schema" style="display:none">
+                                                                           <textarea readonly class="code codeMirror">${schemaRequestBody}</textarea>
+                                                               </div>
+                                                            </div>
+                                                      </div>`;
+
+
+                            }
+
+                            // Reponses for Endpoint
+                            var responseHtml = "";
+                            $.each(endpointData.responses, function (statuscode, details) {
+                                responseHtml += `<tr>
+                                                        <td>${statuscode}</td>
+                                                        <td>${details.description}</td>
+                                                     </tr>`;
+                            })
+
+
+                            var methodClassName = "";
+                            switch (method.toUpperCase()) {
+                                case "GET":
+                                    methodClassName = "btn btn-success";
+                                    break;
+                                case "POST":
+                                    methodClassName = "btn btn-primary";
+                                    break;
+                                case "PUT":
+                                    methodClassName = "btn btn-warning";
+                                    break;
+                                case "DELETE":
+                                    methodClassName = "btn btn-danger";
+                                    break;
+                            }
+
+                            var listofApis = `<div class="card p-2" style="border:silver dotted 1px;">
+                                                                  <div class="card-header d-flex p-0" style="border:silver solid 1px;">
+                                                                      <button type="button" class="btn" onclick="openCardCollapse(this)">
+                                                                          <span class="${methodClassName}">${method.toUpperCase()}</span>
+                                                                          <span class="path text-white">${endpoint}</span>
+                                                                      </button>
+                                                                  </div>
+                                                                  <div class="collapse">
+                                                                      <div class="card-body">
+                                                                      <table class="table ">
+                                                                        <thead>
+                                                                             ${paramHead}
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            ${parameterList}
+                                                                        </tbody>
+                                                                      </table>
+                                                                      </div>
+
+                                                                      <!-- Request Body -->
+                                                                                ${requestBodyHtml}
+                                                                      <!-- Request Body End  -->
+
+                                                                      <!-- Response Body -->
+                                                                      <div class="card">
+                                                                        <div class="card-header">
+                                                                            Responses
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                             <table class="table ">
+                                                                                  <thead>
+                                                                                      <tr>
+                                                                                          <th>Code</th>
+                                                                                          <th>Description</th>
+                                                                                      </tr>
+                                                                                  </thead>
+                                                                              <tbody>
+                                                                                  ${responseHtml}
+
+                                                                              </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                      </div>
+                                                                      <!-- Response Body End  -->
+
+                                                                  </div>
+                                                              </div>`;
+
+                            var tag = `<div class="card">
+                                                    <div class="card-header">
+                                                        <div style="display:flex; justify-content:space-between">
+                                                            <h6>${endpointData.tags[0]}</h6>
+                                                            <button type="button" class="btn btn-secondary" onclick="openCardCollapse(this)"><i class="fa fa-arrow-down"></i></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="collapse">
+                                                                <div class="card-body" id="listofapi">`;
+
+                            var api = { tagName: endpointData.tags[0], tag: tag, listofApis: listofApis };
+
+                            var existingTag = tagswithvalue.find(item => item.tagName === api.tagName);
+                            if (existingTag) {
+                                existingTag.listofApis += api.listofApis;
+                            } else {
+                                tagswithvalue.push(api);
+                            }
+                        });
+                    });
+
+                    //Generating Schema from JSON
+                    var schema = "";
+                    $.each(jsonData.components.schemas, function (modelName, modelDetails) {
+                        var myschemaprop = "";
+
+                        //For Model Properties
+                        $.each(modelDetails.properties, function (prop, propvalue) {
+                            myschemaprop += `<tr><td width='5%'>${prop}</td><td><div class="card"><div class="card-body">`;
+                            $.each(propvalue, function (nestedpro, nestedpropval) {
+                                if (nestedpro === "$ref") {
+                                    var nestedpropsforhtml = "";
+                                    var extractedObj = GenerateObjFromPath(jsonData, nestedpropval);
+
+                                    var replacedObj = ReplaceRefWithActualObject(jsonData, extractedObj);
+
+                                    const keys = Object.keys(extractedObj);
+
+                                    const firstKey = keys[0];
+                                    extractedObj[firstKey] = replacedObj;
+                                    myschemaprop += GenerateSchemaViewFromJson(extractedObj);
+
+                                   
+
+
+                                    myschemaprop += nestedpropsforhtml;
+
+
+                                }
+                                else {
+                                    (nestedpro === 'type') ? myschemaprop += `${nestedpropval}<br/>` : myschemaprop += `${nestedpro}: ${nestedpropval}<br/>`;
+                                }
+
+
+
+                            })
+                            myschemaprop += `</div></div> </td></tr>`
+                        })
+                      
+                        schema = ` <div class="card" style="border:dotted silver 1px"  >
+                                                    <div class="card-header">
+                                                            <button type="button" class="btn text-white " onclick="openCardCollapse(this)">${modelName}</button>
+                                                        <div class="collapse">
+                                                          <table class="table " >
+                                                             <tbody>
+                                                             ${myschemaprop}
+                                                              </tbody>
+
+                                                          </table>
+                                                        </div>
+
+
+                                                </div>
+                                            </div>`;
+
+                        $("#schemalist").append(schema);
                     })
 
+                    //For api  Views
+                    $(".apis").html("")
+                    tagswithvalue.forEach(function (item) {
+                        $(".apis").append(item.tag + item.listofApis + "</div></div>");
+                    });
+                    CodeEditorForClassName();
+                },
+                error: function (err) {
+                    alert("Error occurred while fetching data.");
+                    console.log(err);
+                }
+            });
+        }
+
+
+        function openCardCollapse(e) {
+            $(e).closest('.card').find('.collapse').first().collapse('toggle');
+        }
+
+
+
+
+        function checkNestedObject(parentJson, json) {
+            var arrayOfNestedObj = [];
+
+            $.each(json, function (prop, propvalue) {
+
+                $.each(propvalue.properties, function (prop1, prop1value) {
+
+                    if (prop1value.hasOwnProperty("$ref")) {
+
+                        var nestedObjFromPath = GenerateObjFromPath(parentJson, prop1value["$ref"]);
+                        var nestedObjs = checkNestedObject(parentJson, nestedObjFromPath);
+                        nestedObjs.forEach((item) => arrayOfNestedObj.push(item));
+                    }
                 })
-                $.each(tagswithvalue, function (myarray, myarraydata) {
-
-                    $(".apis").append(myarraydata.tagValue)
-                })
 
 
 
-            },
-            error: function (err) {
-                alert("ERr")
-                console.log(err)
+            })
+
+            arrayOfNestedObj.push(json);
+            return arrayOfNestedObj;
+        }
+
+        function GenerateObjFromPath(json, path) {
+            
+            var test = path.replace("#/", "");
+            var a = test.split('/');
+            var modelName = a[a.length - 1];
+            var currentObj = json;
+            for (var i = 0; i < a.length; i++) {
+                if (typeof currentObj === 'object' && currentObj !== null && currentObj.hasOwnProperty(a[i])) {
+                    currentObj = currentObj[a[i]];
+                } else {
+                    return undefined;
+                }
             }
-        })
-    }
 
-</script>
+            var returnObj = {};
+            returnObj[modelName] = currentObj;
+            return returnObj;
+        }
+
+
+        function GenerateSchemaViewFromJson(json) {
+            
+           
+            let html = '<ul>'; 
+
+            for (const key in json) {
+                html += `<li><strong>${key}:</strong> `;
+
+                if (typeof json[key] === 'object' && json[key] !== null) {
+                    html += GenerateSchemaViewFromJson(json[key]);
+                } else {
+                    html += `${json[key]}</li>`;
+                }
+
+            }
+
+            html += '</ul>';
+
+            return html;
+        }
+
+
+
+
+        function GenerateViewFromJObjectProperties(jproperties) {
+            var view = "";
+
+            $.each(jproperties, function (nestedpropvalname, nestedpropvalues) {
+
+                view += `<span class="ml-3 " >${nestedpropvalname}: ${nestedpropvalues}<span><br/>`;
+
+            })
+            return view;
+        }
+
+        function GenerateViewFromJObject(jboject) {
+            var returnview = "";
+            $.each(jboject, function (modelname, modeldetails) {
+                returnview += `<div class="card" style="border:1px dotted silver;" ><div class="card-body">  ${modelname}<br/> <p class="ml-2">`;
+                $.each(modeldetails.properties, function (nestedprop, nestedpropval) {
+                    returnview += ` ${nestedprop} : <br/>`;
+                    returnview += GenerateViewFromJObjectProperties(nestedpropval);
+
+                })
+                returnview += "</p></div></div>"
+            })
+            return returnview;
+        }
+
+        function toggleExampleSchema(e,value) {
+            if (value) {
+                $(e).closest('.card').find('.Schema').show();
+                $(e).closest('.card').find('.Example').hide();
+            }
+            else {
+                $(e).closest('.card').find('.Example').show();
+                $(e).closest('.card').find('.Schema').hide();
+            }
+        }
+
+
+        function ExtractModelNameFromRef(path) {
+            var modelName = path.substring(path.lastIndexOf('/') + 1);
+            return modelName;
+        }
+
+
+
+
+
+        function RecursiveRequestBody(parentJsonData,path) {
+            var objFromPath = GenerateObjFromPath(parentJsonData, path);
+            var objFromNested = checkNestedObject(parentJsonData, objFromPath);
+
+            var requestbodyJSON = {};
+            $.each(objFromPath, function (modelName, modelDetails) {
+                $.each(modelDetails.properties, function (propnName, propValue) {
+                    if (propValue.hasOwnProperty('type')) {
+
+                        switch (propValue.type) {
+                            case "integer":
+                                requestbodyJSON[propnName] = 0;
+                                break;
+                            case "string":
+                                requestbodyJSON[propnName] = "string";
+                                break;
+                            case "number":
+                                requestbodyJSON[propnName] = 0;
+                                break;
+                            case "array":
+                                requestbodyJSON[propnName] = [];
+                                break;
+
+
+                        }
+                    }
+                    if (propValue.hasOwnProperty("$ref")) {
+                        var a = RecursiveRequestBody(parentJsonData, propValue.$ref);
+                    
+                        requestbodyJSON[propnName] = a;
+
+                    }
+
+
+
+                })
+            })
+            return requestbodyJSON;
+
+        }
+  
+
+       
+        function ReplaceRefWithActualObject(parentObject, ObjectWithRef)
+        {
+            var myReplacedObject = {};
+
+            $.each(ObjectWithRef, function (modelName, modelDetails) {
+
+                $.each(modelDetails.properties, function (propName, propDetailObj) {
+                    if (propDetailObj.hasOwnProperty("$ref")){
+                        var objFromPath = GenerateObjFromPath(parentObject, propDetailObj.$ref);
+                        var extractedName = ExtractModelNameFromRef(propDetailObj.$ref);
+                        var recusivedObj = ReplaceRefWithActualObject(parentObject, objFromPath);
+                        myReplacedObject[propName] = {
+
+                            [extractedName]:recusivedObj
+                        };
+                    }
+                    else{
+                        myReplacedObject[propName] = propDetailObj
+
+                    }
+                    
+                    
+                })
+            })
+            return myReplacedObject;
+
+        }
+
+    </script>
+}
 
