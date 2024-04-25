@@ -1,14 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using PayementMVC.Data;
 using PayementMVC.Interfaces;
 using PayementMVC.Repository;
 using PayementMVC.Security;
 using PayementMVC.Utility;
 using PaymentApp.Areas.Admin;
-using Polly;
-using Polly.Timeout;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.

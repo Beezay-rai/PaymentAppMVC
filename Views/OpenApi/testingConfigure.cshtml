@@ -1,0 +1,856 @@
+﻿@model OpenApiModel
+@{
+    var a = await Html.PartialAsync("_Path");
+    var raw = Html.Raw(a);
+}
+
+
+<div class="box d-flex" style="gap:10px;">
+    @*   <div class="card" style="width:20%;">
+    <div class="card-body">
+    <div class="card">
+    <div class="card-header ">
+    <div style="display:flex; justify-content:space-between">
+    <h6>Schemas</h6>
+    <button type="button" class="btn btn-success btn-xs"> + Add</button>
+    </div>
+
+    </div>
+    </div>
+    <div class="card">
+    <div class="card-header">
+    <div style="display:flex; justify-content:space-between">
+    <h6>Tags <i class="fa fa-arrow-down fa-xs"></i> </h6>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    </div> *@
+    <div class="card" style="width:30%">
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input type="text" class="form-control" asp-for="Name" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Version</label>
+                        <input type="text" class="form-control" asp-for="Version" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="form-control" asp-for="Title" />
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <textarea type="text" class="form-control" asp-for="Description"></textarea>
+
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label">Url</label>
+                        <input type="text" class="form-control" id="url" value="https://localhost:7203/swagger/v1/swagger.json" />
+                        <button type="button" class="btn btn-success btn-md" onclick="test()">Generate</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!--Test-->
+    <div class="card d-flex" style="width:70%">
+        <div class="card-body">
+            <h5 id="apiTitle"></h5>
+            <div class="details">
+                <button class="btn btn-secondary btn-xs" id="appVersion"></button>
+                <button class="btn btn-success btn-xs" id="openApiVersion"></button>
+                <p>
+                    @Model.Description
+                </p>
+            </div>
+
+            <div class="apis">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display:flex; justify-content:space-between">
+                            <h6>Tags  </h6>
+                            <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#apibody"><i class="fa fa-arrow-down"></i> </button>
+                        </div>
+                    </div>
+                    <div class="collapse" id="apibody">
+                        <div class="card-body" id="listofapi">
+                            <partial name="_Api" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="schemas">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display:flex; justify-content:space-between">
+                            <h6>Schemas  </h6>
+                            <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#schemasBody"><i class="fa fa-arrow-down"></i> </button>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="schemasBody">
+                        <div class="card-body" id="schemalist">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="myval">
+
+                <textarea id="noice">mygod</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+
+
+    <script >
+        // window.onload = function () {
+        //     test();
+        //     codemirrortestingla();
+
+        // };
+        function codemirrortestingla() {
+            var textarea = document.getElementById("noice");
+            var codemirror = CodeMirror.fromTextArea(textarea, {
+                mode: 'application/json',
+                arguments: true
+            })
+        }
+        function testingDivCodeMirror() {
+            // Initialize CodeMirror for elements with class 'code'
+            var codeElements = document.querySelectorAll(".code");
+            codeElements.forEach((item) => {
+                var editor = CodeMirror(item, {
+                    lineNumbers: false,
+                    value: item.innerHTML, // Use innerHTML for div elements
+                    readOnly: "nocursor",
+                    theme: "dracula",
+                    mode: "htmlmixed" // Assuming the content is HTML
+                });
+                editor.setValue(item.innerHTML);
+                item.CodeMirrorInstance = editor;
+            });
+
+            // Initialize CodeMirror for elements with class 'code-json'
+            var jsonElements = document.querySelectorAll(".code-json");
+            jsonElements.forEach((item) => {
+                var editor = CodeMirror(item, {
+                    lineNumbers: false,
+                    mode: "application/json",
+                    readOnly: "nocursor",
+                    value: item.textContent,
+                    theme: "dracula"
+                });
+                item.CodeMirrorInstance = editor;
+            });
+
+            // Initialize CodeMirror for elements with class 'code-xml'
+            var xmlElements = document.querySelectorAll(".code-xml");
+            xmlElements.forEach((item) => {
+                var editor = CodeMirror(item, {
+                    lineNumbers: false,
+                    mode: "xml",
+                    readOnly: "nocursor",
+                    value: item.textContent,
+                    theme: "dracula"
+                });
+                item.CodeMirrorInstance = editor;
+            });
+
+            // Initialize CodeMirror for elements with class 'code-javascript'
+            var javascriptElements = document.querySelectorAll(".code-javascript");
+            javascriptElements.forEach((item) => {
+                var editor = CodeMirror(item, {
+                    lineNumbers: false,
+                    mode: "javascript",
+                    readOnly: "nocursor",
+                    value: item.textContent,
+                    theme: "dracula"
+                });
+                item.CodeMirrorInstance = editor;
+            });
+        }
+
+
+
+        function GetSchemaView() {
+            var tagswithvalue = [];
+
+            $.ajax({
+                url: "@Url.Action("PartialViewForSchema")",
+                method: "GET",
+                data: { url: $("#url").val() },
+                success: function (data) {
+                    $("#schemalist").html(data);
+                }
+            })
+        }
+
+        function test() {
+            var tagswithvalue = [];
+
+            $.ajax({
+                url: "@Url.Action("GetUrlJson")",
+                method: "GET",
+                data: { url: $("#url").val() },
+                success: function (data) {
+                    var jsonData = JSON.parse(data);
+                    $("#apiTitle").html(jsonData.info.title)
+                    $("#appVersion").html(jsonData.info.version)
+                    $("#openApiVersion").html(jsonData.openapi)
+                    // GetSchemaView();
+                    $("#listofapi").html("");
+
+                    //Generating Path from Json
+                    $.each(jsonData.paths, function (endpoint, endpointBody) {
+                        $.each(endpointBody, function (method, endpointData) {
+                            var paramHead = "";
+                            var parameterList = "";
+
+                            //Parameters for Endpoint
+                            if (endpointData.hasOwnProperty("parameters")) {
+                                paramHead = ` <tr>
+                                                            <th>Name</th>
+                                                            <th>Description</th>
+                                                           </tr>`;
+                                $.each(endpointData.parameters, function (parameterIndex, parameterDetail) {
+                                    parameterList += `<tr>
+                                                                   <td>${parameterDetail.name}<br/>(${parameterDetail.in})</td>
+                                                                   <td><input class="form-control" placeholder="${parameterDetail.name}"/></td>
+                                                                 </tr>`;
+                                });
+                            }
+                            else {
+                                paramHead = "<tr><th>No Parameters</th></tr>"
+                            }
+
+                            //Request Body for Endpoint
+                            var requestBodyHtml = "";
+                            if (endpointData.hasOwnProperty("requestBody")) {
+
+                                var exampleRequestBody = "";
+                                var schemaRequestBody = "";
+                                var contentDropdownOptions = "";
+                                $.each(endpointData.requestBody.content, function (contentName, contentValue) {
+                                    contentDropdownOptions += `<option value="${contentName}" selected> ${contentName} </option>`;
+                                    if (contentValue.schema.hasOwnProperty("$ref")) {
+
+                                        var objFromPath = GenerateObjFromPath(jsonData, contentValue.schema.$ref);
+                                        var objFromNested = checkNestedObject(jsonData, objFromPath)
+
+                                        var requestbodyJSON = {};
+                                        $.each(objFromPath, function (modelName, modelDetails) {
+                                            $.each(modelDetails.properties, function (propnName, propValue) {
+                                                if (propValue.hasOwnProperty('type')) {
+
+                                                    switch (propValue.type) {
+                                                        case "integer":
+                                                            requestbodyJSON[propnName] = 0;
+                                                            break;
+                                                        case "string":
+                                                            requestbodyJSON[propnName] = "string";
+                                                            break;
+                                                        case "number":
+                                                            requestbodyJSON[propnName] = 0;
+                                                            break;
+                                                        case "array":
+                                                            requestbodyJSON[propnName] = [];
+                                                            break;
+
+
+                                                    }
+                                                }
+                                                if (propValue.hasOwnProperty("$ref")) {
+                                                    requestbodyJSON[propnName] = RecursiveRequestBody(jsonData, propValue.$ref);
+                                                }
+
+
+
+                                            })
+                                        })
+
+                                        //Schema for examplerequestBody
+                                        exampleRequestBody = JSON.stringify(requestbodyJSON, null, 2);
+
+                                        var schemaJsonForRequestBody = ReplaceRefWithActualObject(jsonData, objFromPath);
+
+                                        schemaRequestBody = JSON.stringify(schemaJsonForRequestBody, null, 2);
+
+                                    }
+                                    else {
+
+
+                                        $.each(contentValue.schema, function (schemaName, schemaValue) {
+                                            exampleRequestBody = schemaValue;
+                                            schemaRequestBody = schemaValue;
+                                        });
+                                    }
+                                });
+
+                                requestBodyHtml = `<div class="card">
+                                                                    <div class="card-header">
+                                                                        Request Body
+
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <div class="wrapper" style="display:flex; justify-content:space-between">
+
+                                                                                  <div class="listForExampleSchema" >
+                                                                               <ul class="tab" style="display:flex" >
+                                                                                         <li class="tabitem "style="list-style-type:none;" ><button class="btn text-white p-0" type="button"onClick="toggleExampleSchema(this,false)"> Example  |</button></li>
+                                                                                                   <li class="tabitem "style="list-style-type:none;" ><button class="btn text-white p-0" type="button" onClick="toggleExampleSchema(this,true)">Schema</button> </li>
+                                                                                       </ul>
+                                                                               </div>
+
+                                                                               <div class="dropdownOptions">
+                                                                                <select class="form-control">
+                                                                                        ${contentDropdownOptions}
+                                                                                </select>
+                                                                               </div>
+                                                                        </div>
+
+
+                                                                       <div class="Example">
+
+                                                                           <div class="code-json">${exampleRequestBody}</div>
+                                                                       </div>
+                                                                       <div class="Schema" style="display:none">
+                                                                            <div  class="code-json">${schemaRequestBody}</div>
+                                                                       </div>
+                                                                    </div>
+                                                              </div>`;
+
+
+                            }
+
+                            // Reponses for Endpoint
+                            var responseHtml = "";
+                            $.each(endpointData.responses, function (statuscode, details) {
+                                var responseBodyHtml = "";
+                                var responseMediaTypeDropDownOptions = "";
+                                if (details.hasOwnProperty("content")) {
+
+                                    var objfromRef = {};
+                                    var convertedToAccContentType;
+
+
+                                    $.each(details.content, function (mediaTypeName, mediaTypeDetails) {
+                                        if (mediaTypeDetails.schema.hasOwnProperty('$ref')) {
+                                            objfromRef = GenerateObjFromPath(jsonData, mediaTypeDetails.schema.$ref);
+                                            switch (mediaTypeName) {
+
+
+                                                case "application/json":
+                                                    convertedToAccContentType = JSON.stringify(objfromRef, null, 2);
+                                                    break;
+                                                case "application/xml":
+                                                    convertedToAccContentType = ConvertJsonToXML(objfromRef);
+                                                    break;
+
+
+
+                                            }
+
+                                        }
+                                        else {
+                                            convertedToAccContentType = mediaTypeDetails.schema.type;
+                                        }
+                                        responseMediaTypeDropDownOptions += `<option value="${mediaTypeName}" selected>${mediaTypeName}</option> `;
+                                    })
+                                    responseBodyHtml = `<div class="card">
+                                                                            <div class="card-header">
+                                                                                <label class='control-label'>Media Type</label>
+                                                                                <select class='form-control' onchange="mediatypechange(this)">
+                                                                                    ${responseMediaTypeDropDownOptions}
+                                                                                 </select>
+
+                                                                            </div>
+                                                                            <div class="card-body">
+                                                                                <div class='code'>${convertedToAccContentType}</div>
+                                                                            </div>
+                                                                         </div> `;
+                                }
+
+
+                                responseHtml += `<tr>
+                                                            <td>${statuscode}</td>
+                                                            <td>${details.description}${responseBodyHtml}</td>
+                                                         </tr>`;
+                            })
+
+
+                            var methodClassName = "";
+                            switch (method.toUpperCase()) {
+                                case "GET":
+                                    methodClassName = "btn btn-success";
+                                    break;
+                                case "POST":
+                                    methodClassName = "btn btn-primary";
+                                    break;
+                                case "PUT":
+                                    methodClassName = "btn btn-warning";
+                                    break;
+                                case "PATCH":
+                                    methodClassName = "btn btn-warning";
+                                    break;
+                                case "DELETE":
+                                    methodClassName = "btn btn-danger";
+                                    break;
+                            }
+
+                            var listofApis = `<div class="card p-2" style="border:silver dotted 1px;">
+                                                                          <div class="card-header d-flex p-0" style="border:silver solid 1px;">
+                                                                              <button type="button" class="btn" onclick="openCardCollapse(this)">
+                                                                                  <span class="${methodClassName}">${method.toUpperCase()}</span>
+                                                                                  <span class="path text-white">${endpoint}</span>
+                                                                              </button>
+                                                                          </div>
+                                                                          <div class="collapse">
+                                                                              <div class="card-body">
+                                                                              <table class="table ">
+                                                                                <thead>
+                                                                                     ${paramHead}
+
+                                                                                     <button style="float:right;" type="button" class="btn btn-outline-secondary" onclick="openExecutionBtns(this)" >Try it out</button>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    ${parameterList}
+
+
+
+                                                                                </tbody>
+                                                                              </table>
+
+                                                                              </div>
+
+                                                                              <!-- Request Body -->
+                                                                                        ${requestBodyHtml}
+
+                                                                                 <div class="exectuion-btns" style="display:none;width:100%">
+                                                                                     <button type="button" style="width:100%" class='btn btn-primary execute'onclick="executeApi(this)" >Execute</button>
+                                                                                     <button type="button"style="width:40%;display:none; " onclick="clearExecutionApi(this)"   class='btn btn-outline-secondary clear'>Clear</button>
+                                                                                 </div>
+                                                                              <!-- Request Body End  -->
+
+                                                                              <!-- Response Body -->
+                                                                              <div class="card">
+                                                                                <div class="card-header">
+                                                                                    Responses
+                                                                                </div>
+                                                                                <div class="card-body">
+                                                                                     <table class="table ">
+                                                                                          <thead>
+                                                                                              <tr>
+                                                                                                  <th>Code</th>
+                                                                                                  <th>Description</th>
+                                                                                              </tr>
+                                                                                          </thead>
+                                                                                      <tbody>
+                                                                                          ${responseHtml}
+
+                                                                                      </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                              </div>
+                                                                              <!-- Response Body End  -->
+
+                                                                          </div>
+                                                                      </div>`;
+
+                            var tag = `<div class="card">
+                                                            <div class="card-header">
+                                                                <div style="display:flex; justify-content:space-between">
+                                                                    <h6>${endpointData.tags[0]}</h6>
+                                                                    <button type="button" class="btn btn-secondary" onclick="openCardCollapse(this)"><i class="fa fa-arrow-down"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="collapse">
+                                                                        <div class="card-body" id="listofapi">`;
+
+                            var api = { tagName: endpointData.tags[0], tag: tag, listofApis: listofApis };
+
+                            var existingTag = tagswithvalue.find(item => item.tagName === api.tagName);
+                            if (existingTag) {
+                                existingTag.listofApis += api.listofApis;
+                            } else {
+                                tagswithvalue.push(api);
+                            }
+                        });
+                    });
+
+                    //Generating Schema from JSON
+                    var schema = "";
+                    $.each(jsonData.components.schemas, function (modelName, modelDetails) {
+                        var myschemaprop = "";
+
+                        //For Model Properties
+                        $.each(modelDetails.properties, function (prop, propvalue) {
+                            myschemaprop += `<tr><td width='5%'>${prop}</td><td><div class="card"><div class="card-body">`;
+                            $.each(propvalue, function (nestedpro, nestedpropval) {
+                                if (nestedpro === "$ref") {
+                                    var nestedpropsforhtml = "";
+                                    var extractedObj = GenerateObjFromPath(jsonData, nestedpropval);
+
+                                    var replacedObj = ReplaceRefWithActualObject(jsonData, extractedObj);
+
+                                    const keys = Object.keys(extractedObj);
+
+                                    const firstKey = keys[0];
+                                    extractedObj[firstKey] = replacedObj;
+                                    myschemaprop += GenerateSchemaViewFromJson(extractedObj);
+
+
+
+
+                                    myschemaprop += nestedpropsforhtml;
+
+
+                                }
+                                else {
+                                    (nestedpro === 'type') ? myschemaprop += `${nestedpropval}<br/>` : myschemaprop += `${nestedpro}: ${nestedpropval}<br/>`;
+                                }
+
+
+
+                            })
+                            myschemaprop += `</div></div> </td></tr>`
+                        })
+
+                        schema += ` <div class="card" style="border:dotted silver 1px"  >
+                                                            <div class="card-header">
+                                                                    <button type="button" class="btn text-white " onclick="openCardCollapse(this)">${modelName}</button>
+                                                                <div class="collapse">
+                                                                  <table class="table " >
+                                                                     <tbody>
+                                                                     ${myschemaprop}
+                                                                      </tbody>
+
+                                                                  </table>
+                                                                </div>
+
+
+                                                        </div>
+                                                    </div>`;
+
+                    })
+                    $("#schemalist").html(schema);
+
+                    //For api  Views
+                    $(".apis").html("")
+                    tagswithvalue.forEach(function (item) {
+                        $(".apis").append(item.tag + item.listofApis + "</div></div>");
+                    });
+                    // CodeEditorForClasses();
+                    testingDivCodeMirror();
+                },
+                error: function (err) {
+                    alert("Error occurred while fetching data.");
+                    console.log(err);
+                }
+            });
+
+        }
+
+
+
+
+        function openCardCollapse(e) {
+            $(e).closest('.card').find('.collapse').first().collapse('toggle');
+        }
+
+
+
+
+        function checkNestedObject(parentJson, json) {
+            var arrayOfNestedObj = [];
+
+            $.each(json, function (prop, propvalue) {
+
+                $.each(propvalue.properties, function (prop1, prop1value) {
+
+                    if (prop1value.hasOwnProperty("$ref")) {
+
+                        var nestedObjFromPath = GenerateObjFromPath(parentJson, prop1value["$ref"]);
+                        var nestedObjs = checkNestedObject(parentJson, nestedObjFromPath);
+                        nestedObjs.forEach((item) => arrayOfNestedObj.push(item));
+                    }
+                })
+
+
+
+            })
+
+            arrayOfNestedObj.push(json);
+            return arrayOfNestedObj;
+        }
+
+        function GenerateObjFromPath(json, path) {
+
+            var test = path.replace("#/", "");
+            var a = test.split('/');
+            var modelName = a[a.length - 1];
+            var currentObj = json;
+            for (var i = 0; i < a.length; i++) {
+                if (typeof currentObj === 'object' && currentObj !== null && currentObj.hasOwnProperty(a[i])) {
+                    currentObj = currentObj[a[i]];
+                } else {
+                    return undefined;
+                }
+            }
+
+            var returnObj = {};
+            returnObj[modelName] = currentObj;
+            return returnObj;
+        }
+
+
+        function GenerateSchemaViewFromJson(json) {
+
+
+            let html = '<ul>';
+
+            for (const key in json) {
+                html += `<li><strong>${key}:</strong> `;
+
+                if (typeof json[key] === 'object' && json[key] !== null) {
+                    html += GenerateSchemaViewFromJson(json[key]);
+                } else {
+                    html += `${json[key]}</li>`;
+                }
+
+            }
+
+            html += '</ul>';
+
+            return html;
+        }
+
+
+
+
+        function GenerateViewFromJObjectProperties(jproperties) {
+            var view = "";
+
+            $.each(jproperties, function (nestedpropvalname, nestedpropvalues) {
+
+                view += `<span class="ml-3 " >${nestedpropvalname}: ${nestedpropvalues}<span><br/>`;
+
+            })
+            return view;
+        }
+
+        function GenerateViewFromJObject(jboject) {
+            var returnview = "";
+            $.each(jboject, function (modelname, modeldetails) {
+                returnview += `<div class="card" style="border:1px dotted silver;" ><div class="card-body">  ${modelname}<br/> <p class="ml-2">`;
+                $.each(modeldetails.properties, function (nestedprop, nestedpropval) {
+                    returnview += ` ${nestedprop} : <br/>`;
+                    returnview += GenerateViewFromJObjectProperties(nestedpropval);
+
+                })
+                returnview += "</p></div></div>"
+            })
+            return returnview;
+        }
+
+        function toggleExampleSchema(e, value) {
+            if (value) {
+                $(e).closest('.card').find('.Schema').show();
+                $(e).closest('.card').find('.Example').hide();
+            }
+            else {
+                $(e).closest('.card').find('.Example').show();
+                $(e).closest('.card').find('.Schema').hide();
+            }
+        }
+
+
+        function ExtractModelNameFromRef(path) {
+            var modelName = path.substring(path.lastIndexOf('/') + 1);
+            return modelName;
+        }
+
+
+
+
+
+        function RecursiveRequestBody(parentJsonData, path) {
+            var objFromPath = GenerateObjFromPath(parentJsonData, path);
+            var objFromNested = checkNestedObject(parentJsonData, objFromPath);
+
+            var requestbodyJSON = {};
+            $.each(objFromPath, function (modelName, modelDetails) {
+                $.each(modelDetails.properties, function (propnName, propValue) {
+                    if (propValue.hasOwnProperty('type')) {
+
+                        switch (propValue.type) {
+                            case "integer":
+                                requestbodyJSON[propnName] = 0;
+                                break;
+                            case "string":
+                                requestbodyJSON[propnName] = "string";
+                                break;
+                            case "number":
+                                requestbodyJSON[propnName] = 0;
+                                break;
+                            case "array":
+                                requestbodyJSON[propnName] = [];
+                                break;
+
+
+                        }
+                    }
+                    if (propValue.hasOwnProperty("$ref")) {
+                        var a = RecursiveRequestBody(parentJsonData, propValue.$ref);
+
+                        requestbodyJSON[propnName] = a;
+
+                    }
+
+
+
+                })
+            })
+            return requestbodyJSON;
+
+        }
+
+
+
+
+
+
+        function ConvertJsonToXML(object) {
+            var xmlObj = json2xml(object, { compact: true, spaces: 4 });
+            return xmlObj;
+        }
+
+
+
+
+
+
+
+
+
+        function ReplaceRefWithActualObject(parentObject, ObjectWithRef) {
+            var myReplacedObject = {};
+
+            $.each(ObjectWithRef, function (modelName, modelDetails) {
+
+                $.each(modelDetails.properties, function (propName, propDetailObj) {
+                    if (propDetailObj.hasOwnProperty("$ref")) {
+                        var objFromPath = GenerateObjFromPath(parentObject, propDetailObj.$ref);
+                        var extractedName = ExtractModelNameFromRef(propDetailObj.$ref);
+                        var recusivedObj = ReplaceRefWithActualObject(parentObject, objFromPath);
+                        myReplacedObject[propName] = {
+
+                            [extractedName]: recusivedObj
+                        };
+                    }
+                    else {
+                        myReplacedObject[propName] = propDetailObj
+
+                    }
+
+
+                })
+            })
+            return myReplacedObject;
+
+        }
+
+        function mediatypechange(e) {
+
+            var card = $(e).closest('.card');
+            var textArea = card.find('.code');
+            var objTobeChanged = textArea.val();
+            var contentType = $(e).val();
+            var changedObj = "";
+            var modeForEditor = "";
+
+            switch (contentType) {
+                case "application/json":
+                    changedObj = xml2json(objTobeChanged, { compact: true, spaces: 2 });
+                    modeForEditor = "application/json";
+                    break;
+
+                case "application/xml":
+                    changedObj = ConvertJsonToXML(objTobeChanged);
+                    modeForEditor = "xml";
+                    break;
+
+
+            }
+            var check = textArea[0].hasOwnProperty('CodeMirrorInstance');
+            if (check) {
+
+                var editor = textArea[0].CodeMirrorInstance;
+                editor.setValue(changedObj);
+                editor.setOption("mode", modeForEditor);
+                textArea.val(changedObj);
+            }
+        }
+
+
+
+
+
+        function openExecutionBtns(e) {
+            var a = $(e).closest('.collapse').find('.exectuion-btns');
+            a.toggle();
+            if ($(e).text() === 'Try it out') {
+                $(e).text('Cancel');
+            } else {
+                $(e).text('Try it out');
+            }
+            $(e).toggleClass('btn-outline-danger btn-outline-secondary');
+
+        }
+
+
+        function executeApi(e) {
+
+            $(e).closest('.exectuion-btns').find('.clear').show();
+            $(e).css('width', '50%');
+        }
+
+        function clearExecutionApi(e) {
+            $(e).closest('.exectuion-btns').find('.execute').css('width', '100%');
+            $(e).hide();
+        }
+
+    </script>
+}
+

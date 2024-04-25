@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq; // Ensure you have Newtonsoft.Json package installed
 
 public class ApiDetail
@@ -105,6 +104,6 @@ public class MyController : Controller
         }
 
         // Now you have the HTML content generated, you can pass it to the View or return it as needed
-        return Json( tagsWithValue);
+        return Json(tagsWithValue);
     }
 }

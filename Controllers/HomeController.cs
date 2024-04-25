@@ -18,7 +18,7 @@ namespace PayementMVC.Controllers
 
         IMemoryCache _memoryCache;
         private readonly ITransaction _transaction;
-        public HomeController(ILogger<HomeController> logger, IMemoryCache memoryCache, ITransaction transaction, IGlobalVariable global,ITest test)
+        public HomeController(ILogger<HomeController> logger, IMemoryCache memoryCache, ITransaction transaction, IGlobalVariable global, ITest test)
         {
             _logger = logger;
             _memoryCache = memoryCache;

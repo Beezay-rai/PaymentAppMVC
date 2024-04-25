@@ -5,7 +5,7 @@ using PaymentApp.Areas.Admin;
 
 namespace PayementMVC.Repository
 {
-    public class OpenApiRepository:IOpenApi
+    public class OpenApiRepository : IOpenApi
     {
         DatabaseUtilities _con;
 
@@ -16,12 +16,12 @@ namespace PayementMVC.Repository
 
         public void Create(OpenApiModel model)
         {
-            using(var con = _con.GetConnection())
+            using (var con = _con.GetConnection())
             {
                 _con.OpenConnection();
                 var query = "Insert Into OpenApi(Name,Version,Title,Description,Visibility) VALUES(@Name,@Version,@Title,@Description,@Visibility)";
 
-            
+
                 var response = con.Execute(query, model);
                 Console.WriteLine($"{response} rows affected  !");
                 _con.CloseConnection();
@@ -35,7 +35,7 @@ namespace PayementMVC.Repository
             {
                 _con.OpenConnection();
                 var list = con.Query<OpenApiModel>("Select * from OpenApi").ToList();
-                
+
                 _con.CloseConnection();
                 return list;
 

@@ -1,20 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using NuGet.Common;
 using PayementMVC.Interfaces;
 using PayementMVC.Models;
+using PayementMVC.Utility;
+using System.Net.Http.Headers;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace PayementMVC.Controllers
 {
     public class OpenApiController : Controller
     {
         private readonly IOpenApi _openapi;
+        private readonly IGlobalVariable _global;
+        private readonly HttpClient _httpClient;
 
-        private readonly MyController _controlelr = new MyController();
-        public OpenApiController(IOpenApi openapi)
+
+        public OpenApiController(IOpenApi openapi,IGlobalVariable globalVariable, HttpClient httpClient)
         {
             _openapi = openapi;
+            _global = globalVariable;
+            _httpClient = httpClient;
         }
 
         public IActionResult Index()
@@ -177,6 +184,40 @@ namespace PayementMVC.Controllers
 
         }
 
+
+
+
+        public async Task<JsonResult> ExecuteApi(string url,string method, string mediaType)
+        {
+            HttpMethod httpMethod =new  HttpMethod(method);
+            
+           
+            var request = new HttpRequestMessage(httpMethod, url);
+            try
+            {
+                var responseMessage = await _httpClient.SendAsync(request);
+
+                var contentType = responseMessage.Content.Headers.ContentType.MediaType ?? "";
+
+                var values = await responseMessage.Content.ReadAsStringAsync();
+
+
+                return Json(new { StatusCode = responseMessage.StatusCode, ContentType = contentType, ResponseValue = values, ServerResponse = responseMessage });
+
+            }
+            catch (Exception ez)
+            {
+                return Json(new { StatusCode = 500, ResponseValue = ez.Message, ServerResponse= ez });
+            }
+            
+           
+        }
+
+        public IActionResult testingConfigure(int id)
+        {
+            var data = _openapi.GetById(id);
+            return View(data);
+        }
 
 
 

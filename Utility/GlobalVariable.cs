@@ -71,7 +71,7 @@ namespace PayementMVC.Utility
         public async Task<ResponseModel> GetMethod(string url)
         {
             var response = new ResponseModel();
-            var retryresp = await _retryPolicy.ExecuteAsync(() => _httpClient.GetAsync(baseUrl +url));
+            var retryresp = await _retryPolicy.ExecuteAsync(() => _httpClient.GetAsync(baseUrl + url));
 
             var apiresponse = await _httpClient.GetAsync(baseUrl + url);
             if (apiresponse.StatusCode == HttpStatusCode.OK)

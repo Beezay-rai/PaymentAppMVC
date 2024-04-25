@@ -1,12 +1,8 @@
-﻿using PayementMVC.Data;
-using PayementMVC.Models;
-using PayementMVC.Security;
-using Polly;
-using System.Net;
+﻿using System.Net;
 
 namespace PayementMVC.Security
 {
-    public class Test: ITest
+    public class Test : ITest
     {
 
         private readonly HttpClient _httpClient;
@@ -14,7 +10,7 @@ namespace PayementMVC.Security
         private readonly ILogger<Test> _logger;
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public Test(ILogger<Test> logger,HttpClient httpClient,IHttpClientFactory httpClientFactory)
+        public Test(ILogger<Test> logger, HttpClient httpClient, IHttpClientFactory httpClientFactory)
         {
             _logger = logger;
             _httpClient = httpClient;
@@ -56,7 +52,7 @@ namespace PayementMVC.Security
                 var retryresp = await httpclient.GetAsync(baseUrl + url);
                 response = await httpclient.GetAsync(baseUrl + url);
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 _logger.LogError($"Error occured:  {ex.Message},exceptionType: {ex.GetType()}");
                 response.StatusCode = HttpStatusCode.BadRequest;

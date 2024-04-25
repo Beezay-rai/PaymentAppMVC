@@ -1,7 +1,5 @@
-﻿using Humanizer;
-using Polly;
+﻿using Polly;
 using Polly.CircuitBreaker;
-using System;
 
 namespace PayementMVC.Security
 {
