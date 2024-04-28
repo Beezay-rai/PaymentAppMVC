@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VvE/noiueit+f8aDExwKMdJzoMifNaZoMW7ig8IYN8UO6I/uBZWEQd1C0s9EvacR2iQ6FCvK/JyEVY6NQ7prsg==",
+  "dgSpecHash": "QjOUudtn9TNAlmMHZM9Zy6nrJoOHF6wejVuJYgTBhAUOdUm7/Tldli9od2arYX1xtKq/ceaHRQMDVULJ/kWYVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentAppMVC\\PayementMVC.csproj",
   "expectedPackageFiles": [
@@ -149,6 +149,7 @@
     "C:\\Users\\OnePoint-bijay\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\OnePoint-bijay\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\OnePoint-bijay\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
+    "C:\\Users\\OnePoint-bijay\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
     "C:\\Users\\OnePoint-bijay\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\OnePoint-bijay\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\OnePoint-bijay\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

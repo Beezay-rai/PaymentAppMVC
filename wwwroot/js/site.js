@@ -22,11 +22,14 @@ function CodeEditorForClasses() {
     jsonElement.forEach((item) => {
         var editor = CodeMirror.fromTextArea(item, {
             lineNumbers: false,
+            lineWrapping: true,  
             mode: "application/json",
             readOnly: true,
             value: item.value,
             theme: "dracula"
         });
+
+       
         item.CodeMirrorInstance = editor;
 
     });

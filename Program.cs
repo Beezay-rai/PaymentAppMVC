@@ -5,6 +5,7 @@ using PayementMVC.Repository;
 using PayementMVC.Security;
 using PayementMVC.Utility;
 using PaymentApp.Areas.Admin;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -13,9 +14,9 @@ builder.Services.AddControllersWithViews();
 
 
 //Creating Logger
-var logger = LoggerFactory.Create(loggingBuilder => loggingBuilder
-    .AddConsole()).CreateLogger("Logs");
-
+var logger = new LoggerConfiguration()
+    .WriteTo.File("./Logs/log-.txt",rollingInterval:RollingInterval.Day)
+    .CreateLogger();
 
 builder.Services.AddDbContext<PaymentDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddAutoMapper(typeof(Program));
@@ -23,12 +24,13 @@ builder.Services.AddTransient<ITransaction, TransactionRepository>();
 builder.Services.AddTransient<IOpenApi, OpenApiRepository>();
 builder.Services.AddScoped<IGlobalVariable, GlobalVariable>();
 builder.Services.AddTransient<ITest, Test>();
-builder.Services.AddHttpClient("myclient")
-    .AddPolicyHandler(PollyPolicy.RetryPolicy(logger))
-    .AddPolicyHandler(PollyPolicy.CircuitBreakPolicy(logger));
+builder.Services.AddHttpClient("myclient");
+//    .AddPolicyHandler(PollyPolicy.RetryPolicy(logger))
+//    .AddPolicyHandler(PollyPolicy.CircuitBreakPolicy(logger));
 builder.Services.AddScoped<DatabaseUtilities>();
 
 var app = builder.Build();
+logger.Information("App Initialized !");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

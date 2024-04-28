@@ -5,6 +5,8 @@ using PayementMVC.Interfaces;
 using PayementMVC.Models;
 using PayementMVC.Utility;
 using System.Net.Http.Headers;
+using System.Net.Mime;
+using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -179,20 +181,27 @@ namespace PayementMVC.Controllers
             public Dictionary<string, JObject> NestedPropertiesList { get; set; } = new Dictionary<string, JObject>();
 
             public Dictionary<string, Dictionary<string, JObject>> haha = new Dictionary<string, Dictionary<string, JObject>>();
-
-
-
         }
 
 
 
 
-        public async Task<JsonResult> ExecuteApi(string url,string method, string mediaType)
+        public async Task<JsonResult> ExecuteApi(string url,string method, string mediaType,string? data)
         {
             HttpMethod httpMethod =new  HttpMethod(method);
+            mediaType = String.IsNullOrEmpty(mediaType) ? "application/json" : mediaType;
+         
             
-           
+      
             var request = new HttpRequestMessage(httpMethod, url);
+            if (!string.IsNullOrEmpty(data))
+            {
+                var content = new StringContent(data, Encoding.UTF8, mediaType);
+                content.Headers.ContentType = new MediaTypeHeaderValue(mediaType);
+                request.Content = content;
+            }
+            
+            
             try
             {
                 var responseMessage = await _httpClient.SendAsync(request);
@@ -207,7 +216,7 @@ namespace PayementMVC.Controllers
             }
             catch (Exception ez)
             {
-                return Json(new { StatusCode = 500, ResponseValue = ez.Message, ServerResponse= ez });
+                return Json(new { StatusCode = 500, ResponseValue = JsonConvert.SerializeObject( ez.Message), ServerResponse= ez });
             }
             
            

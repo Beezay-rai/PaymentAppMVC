@@ -218,8 +218,7 @@
                                         var requestbodyJSON = {};
                                         $.each(objFromPath, function (modelName, modelDetails) {
                                             $.each(modelDetails.properties, function (propnName, propValue) {
-                                                if (propValue.hasOwnProperty('type'))
-                                                {
+                                                if (propValue.hasOwnProperty('type')) {
 
                                                     switch (propValue.type) {
                                                         case "integer":
@@ -234,15 +233,15 @@
                                                         case "array":
                                                             requestbodyJSON[propnName] = [];
                                                             break;
-                                                       
+
 
                                                     }
                                                 }
-                                                if(propValue.hasOwnProperty("$ref")){
+                                                if (propValue.hasOwnProperty("$ref")) {
                                                     requestbodyJSON[propnName] = RecursiveRequestBody(jsonData, propValue.$ref);
                                                 }
-                                                
-                                             
+
+
 
                                             })
                                         })
@@ -251,20 +250,40 @@
                                         exampleRequestBody = JSON.stringify(requestbodyJSON, null, 2);
 
                                         var schemaJsonForRequestBody = ReplaceRefWithActualObject(jsonData, objFromPath);
-                                        
+
                                         schemaRequestBody = JSON.stringify(schemaJsonForRequestBody, null, 2);
 
                                     }
                                     else {
+                                        if (contentValue.schema.hasOwnProperty('default')) {
 
+                                            if (contentValue.schema.type === 'string') {
 
-                                        $.each(contentValue.schema, function (schemaName, schemaValue) {
-                                            exampleRequestBody = schemaValue;
-                                            schemaRequestBody = schemaValue;
-                                        });
+                                                exampleRequestBody = '"' + contentValue.schema.default + '"';
+                                            }
+                                            else {
+
+                                                exampleRequestBody = contentValue.schema.default;
+
+                                            }
+                                            schemaRequestBody = contentValue.schema.type;
+                                        }
+                                        else {
+                                            if (contentValue.schema.type === 'string') {
+
+                                                exampleRequestBody = '"' + contentValue.schema.type + '"';
+                                            }
+                                            else {
+
+                                                exampleRequestBody = contentValue.schema.type;
+
+                                            }
+                                            schemaRequestBody = contentValue.schema.type;
+
+                                        }
                                     }
                                 });
-                                
+
                                 requestBodyHtml = `<div class="card">
                                                             <div class="card-header">
                                                                 Request Body
@@ -867,12 +886,14 @@
 
 
             var requestBodyMediaTypeHtml = closestCollapse.querySelector('.requestBodyMediaType');
-            var requestBodyMediaType="asd";
-            if ( requestBodyMediaTypeHtml !== null) { 
-                
+            var requestBodyHtml= closestCollapse.querySelector('.Example textarea');
+            var requestBodyMediaType="";
+            var requestBodyVal;
+            if (requestBodyMediaTypeHtml !== null && requestBodyHtml !== null) {
                 requestBodyMediaType = requestBodyMediaTypeHtml.value;
-            
+                requestBodyVal = requestBodyHtml.CodeMirrorInstance.getValue();
             }
+
 
            
 
@@ -894,17 +915,17 @@
 
             var authorizeKeyValue = $("#apiKeyValue").val();
             authorizeKeyValue = (authorizeKeyValue === undefined) ? "" : authorizeKeyValue;
-
             //APi Execution
             $.ajax({
                 url: "@Url.Action("ExecuteApi")",
-                data: { url: urlWithqueryParam, method: method, mediaType: requestBodyMediaType},
+                data: { url: urlWithqueryParam, method: method, mediaType: requestBodyMediaType, data: requestBodyVal },
                 success: function (data) {
                     var responseValue;
                     var codeMirrormode;
 
                     switch (data.contentType) {
                         case "application/json":
+                        case "application/problem+json":
                             var parsed = JSON.parse(data.responseValue.toString());
                             responseValue = JSON.stringify(parsed, null,2);
                             codeMirrormode = data.contentType
@@ -914,8 +935,8 @@
                             responseValue = data.responseValue;
                             break;
                         default:
-                            var parsed = JSON.parse(data.responseValue.toString());
-                            responseValue = JSON.stringify(parsed, null, 2);
+                            // var parsed = JSON.parse(data.responseValue.toString());
+                            responseValue = data.responseValue.toString();
                             codeMirrormode = "application/json";
                             break;
 

@@ -272,3 +272,4 @@ C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\obj\Debug\n
 C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\obj\Debug\net6.0\PayementMVC.pdb
 C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\obj\Debug\net6.0\PayementMVC.genruntimeconfig.cache
 C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\obj\Debug\net6.0\ref\PayementMVC.dll
+C:\Users\OnePoint-bijay\Desktop\Projects\OfficeProject\PaymentAppMVC\bin\Debug\net6.0\Serilog.Sinks.File.dll
