@@ -17,13 +17,15 @@ namespace PayementMVC.Controllers
         private readonly IOpenApi _openapi;
         private readonly IGlobalVariable _global;
         private readonly HttpClient _httpClient;
+        private readonly IWebHostEnvironment _env;
 
 
-        public OpenApiController(IOpenApi openapi,IGlobalVariable globalVariable, HttpClient httpClient)
+        public OpenApiController(IOpenApi openapi,IGlobalVariable globalVariable, HttpClient httpClient,IWebHostEnvironment webHost)
         {
             _openapi = openapi;
             _global = globalVariable;
             _httpClient = httpClient;
+            _env= webHost;
         }
 
         public IActionResult Index()
@@ -186,15 +188,19 @@ namespace PayementMVC.Controllers
 
 
 
-        public async Task<JsonResult> ExecuteApi(string url,string method, string mediaType,string? data)
+        public async Task<JsonResult> ExecuteApi(string url,string method, string mediaType,string? data,string? scheme,string? token)
         {
             HttpMethod httpMethod =new  HttpMethod(method);
+
             mediaType = String.IsNullOrEmpty(mediaType) ? "application/json" : mediaType;
-         
+            var request = new HttpRequestMessage(httpMethod, url);
+            if (!string.IsNullOrWhiteSpace(scheme))
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue(scheme, token);
+            }
             
       
-            var request = new HttpRequestMessage(httpMethod, url);
-            if (!string.IsNullOrEmpty(data))
+            if (!string.IsNullOrEmpty(data)) 
             {
                 var content = new StringContent(data, Encoding.UTF8, mediaType);
                 content.Headers.ContentType = new MediaTypeHeaderValue(mediaType);
@@ -206,17 +212,17 @@ namespace PayementMVC.Controllers
             {
                 var responseMessage = await _httpClient.SendAsync(request);
 
-                var contentType = responseMessage.Content.Headers.ContentType.MediaType ?? "";
+                var contentType = responseMessage.Content.Headers.ContentType !=null? responseMessage.Content.Headers.ContentType.MediaType : "";
 
                 var values = await responseMessage.Content.ReadAsStringAsync();
 
 
-                return Json(new { StatusCode = responseMessage.StatusCode, ContentType = contentType, ResponseValue = values, ServerResponse = responseMessage });
+                return Json(new { ResponseValue = values, ServerResponse = responseMessage ,ContentType= contentType });
 
             }
             catch (Exception ez)
             {
-                return Json(new { StatusCode = 500, ResponseValue = JsonConvert.SerializeObject( ez.Message), ServerResponse= ez });
+                return Json(ez);
             }
             
            
@@ -228,7 +234,34 @@ namespace PayementMVC.Controllers
             return View(data);
         }
 
+        public IActionResult Editor()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public IActionResult Editor(string code,string codeJson)
+        {
+            var webRootPath = _env.WebRootPath;
+
+            var filePath = Path.Combine(webRootPath, "swagger", "openapi.json");
+            var filePathYaml = Path.Combine(webRootPath, "swagger", "openapi.yaml");
+
+            var directoryPath = Path.GetDirectoryName(filePath);
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
+            System.IO.File.WriteAllText(filePath, JsonConvert.DeserializeObject<object>( codeJson).ToString());
+            System.IO.File.WriteAllText(filePathYaml, code);
+          
+            //PaymentApp
+            System.IO.File.WriteAllText("C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentApp\\wwwroot\\openapi.json", JsonConvert.DeserializeObject<object>(codeJson).ToString());
+            System.IO.File.WriteAllText("C:\\Users\\OnePoint-bijay\\Desktop\\Projects\\OfficeProject\\PaymentApp\\wwwroot\\openapi.yaml", code);
+
+            return RedirectToAction("Editor");
+        }
 
 
 

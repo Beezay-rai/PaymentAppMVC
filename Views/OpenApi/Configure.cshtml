@@ -547,22 +547,23 @@
                         
 
                         var securitySchemesObjects = jsonData.components.securitySchemes;
+                        
                         for (let authorizeprop in securitySchemesObjects) {
                             
                             if (typeof securitySchemesObjects[authorizeprop] === 'object') {
                                 for (let props in securitySchemesObjects[authorizeprop]) {
                                     (props === 'type')? authorizebodysection += `<p>${authorizeprop} (${securitySchemesObjects[authorizeprop][props]})</p>` : authorizebodysection += `<p>${props}: ${securitySchemesObjects[authorizeprop][props]}</p>`;
-                                   
+                                    if (props === 'scheme') { localStorage.setItem("scheme", securitySchemesObjects[authorizeprop][props]) }
                                 }
                             }
 
                         }
-                        authorizeSection += authorizebodysection + `   <p>
+                        authorizeSection += authorizebodysection + `<p>
                                                 <label class="control-label">Value</label>
                                                 <input class="form-control" id="apiKeyValue" required />
                                             </p> <div>
                                                 <button type="button"  class="btn btn-success" onclick="setApiKeyValue(this)">Authorize</button>
-                                                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#authroizeModal">Cancel</button>
+                                                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#authroizeModal">Cancel</button>
                                             </div>
                                         </div>`;
                     }
@@ -883,8 +884,7 @@
             $(e).css('width', '50%');
 
             var inputList = paramTable.querySelectorAll('input');
-
-
+            
             var requestBodyMediaTypeHtml = closestCollapse.querySelector('.requestBodyMediaType');
             var requestBodyHtml= closestCollapse.querySelector('.Example textarea');
             var requestBodyMediaType="";
@@ -894,6 +894,9 @@
                 requestBodyVal = requestBodyHtml.CodeMirrorInstance.getValue();
             }
 
+            //Authentication Sector
+            var scheme = localStorage.getItem("scheme");
+            var token = $("#apiKeyValue").val();
 
            
 
@@ -918,29 +921,42 @@
             //APi Execution
             $.ajax({
                 url: "@Url.Action("ExecuteApi")",
-                data: { url: urlWithqueryParam, method: method, mediaType: requestBodyMediaType, data: requestBodyVal },
+                data: { url: urlWithqueryParam, method: method, mediaType: requestBodyMediaType, data: requestBodyVal, scheme: scheme, token: token },
                 success: function (data) {
-                    var responseValue;
+                    var responseValue ="";
                     var codeMirrormode;
 
-                    switch (data.contentType) {
-                        case "application/json":
-                        case "application/problem+json":
-                            var parsed = JSON.parse(data.responseValue.toString());
-                            responseValue = JSON.stringify(parsed, null,2);
-                            codeMirrormode = data.contentType
-                            break;
-                        case "application/xml":
-                            codeMirrormode = data.contentType;
-                            responseValue = data.responseValue;
-                            break;
-                        default:
-                            // var parsed = JSON.parse(data.responseValue.toString());
-                            responseValue = data.responseValue.toString();
-                            codeMirrormode = "application/json";
-                            break;
+                    if (data.serverResponse.isSuccessStatusCode) {
+                        switch (data.contentType) {
+                            case "application/json":
+                            case "application/problem+json":
+                                var parsed = JSON.parse(data.responseValue.toString());
+                                responseValue = JSON.stringify(parsed, null, 2);
+                                codeMirrormode = data.contentType
+                                break;
+                            case "application/xml":
+                                codeMirrormode = data.contentType;
+                                responseValue = data.responseValue;
+                                break;
+                            default:
+                                // var parsed = JSON.parse(data.responseValue.toString());
+                                responseValue = data.responseValue.toString();
+                                codeMirrormode = "application/json";
+                                break;
+
+                        }
 
                     }
+                    else
+                    {
+                        for (let i = 0; i < data.serverResponse.headers.length; i++) 
+                        {
+                            responseValue += `${data.serverResponse.headers[i].key} : ${data.serverResponse.headers[i].value}\n `
+
+                        }
+                    }
+
+                   
                  
 
 
@@ -966,7 +982,7 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td width="10%">${data.statusCode}</td>
+                                                                        <td width="10%">${data.serverResponse.statusCode}</td>
                                                                 <td >
                                                                     <div class='executionApiRepsonse'>
                                                                         Response Body

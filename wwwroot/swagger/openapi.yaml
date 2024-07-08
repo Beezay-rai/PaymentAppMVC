@@ -1,0 +1,528 @@
+openapi: 3.0.1
+info:
+  title: PaymentAppCreated From Editor 
+  version: '1.0'
+paths:
+  /api/Algorithm/TestAlgorithm:
+    post:
+      tags:
+        - Algorithm
+      parameters:
+        - name: json
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /api/Algorithm/Decrypt:
+    get:
+      tags:
+        - Algorithm
+      parameters:
+        - name: json
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            text/xml:
+              schema:
+                type: string
+  /api/Algorithm/xmlRetrun:
+    get:
+      tags:
+        - Algorithm
+      responses:
+        '200':
+          description: OK
+  /api/Authenticate/Login:
+    post:
+      tags:
+        - Authenticate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginModel'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/LoginModel'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/LoginModel'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/LoginModel'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/LoginModel'
+          application/*+xml:
+            schema:
+              $ref: '#/components/schemas/LoginModel'
+      responses:
+        '200':
+          description: OK
+  /api/Authenticate/Signout:
+    get:
+      tags:
+        - Authenticate
+      responses:
+        '200':
+          description: OK
+  /api/Dapper:
+    get:
+      tags:
+        - Dapper
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            text/xml:
+              schema:
+                type: string
+  /api/Testing/testingXmlObj:
+    post:
+      tags:
+        - Testing
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/TestingRoort'
+            example: "<TestingRoort xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Id>1</Id>\r\n  <testinNAme>a</testinNAme>\r\n  <testinNAme>b</testinNAme>\r\n</TestingRoort>"
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestingRoort'
+            example: {"id":"1","name":["a","b"]}
+      responses:
+        '200':
+          description: OK
+  /api/Testing/testingalo:
+    get:
+      tags:
+        - Testing
+      parameters:
+        - name: json
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /api/Testing/CreatingNewUserForXmlJSON:
+    post:
+      tags:
+        - Testing
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/BalanceModel'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BalanceModel'
+      responses:
+        '200':
+          description: OK
+  /api/Testing/GetItems:
+    get:
+      tags:
+        - Testing
+      parameters:
+        - name: ids
+          in: query
+          schema:
+            type: array
+            items:
+              type: integer
+              format: int32
+      responses:
+        '200':
+          description: OK
+  /api/Testing/OneToManyTest:
+    post:
+      tags:
+        - Testing
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/OneToMany'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OneToMany'
+      responses:
+        '200':
+          description: OK
+  /api/Testing/NoneToSomeTest:
+    post:
+      tags:
+        - Testing
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/NoneToSome'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NoneToSome'
+      responses:
+        '200':
+          description: OK
+  /api/Admin/Transaction/TotalAmount:
+    get:
+      tags:
+        - Transaction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              default: Bijay
+          text/json:
+            schema:
+              type: string
+              default: Bijay
+          application/*+json:
+            schema:
+              type: string
+              default: Bijay
+          application/xml:
+            schema:
+              type: string
+              default: Bijay
+          text/xml:
+            schema:
+              type: string
+              default: Bijay
+          application/*+xml:
+            schema:
+              type: string
+              default: Bijay
+      responses:
+        '200':
+          description: OK
+  /api/Admin/Transaction/WithdrawAmount:
+    post:
+      tags:
+        - Transaction
+      parameters:
+        - name: amount
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: Username
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /api/Admin/Transaction/DepositAmount:
+    post:
+      tags:
+        - Transaction
+      parameters:
+        - name: model
+          in: header
+          schema:
+            $ref: '#/components/schemas/TransactionModel'
+      responses:
+        '200':
+          description: OK
+  /api/Admin/Transaction/CreateNewBalance:
+    post:
+      tags:
+        - Transaction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BalanceModel'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/BalanceModel'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/BalanceModel'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/BalanceModel'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/BalanceModel'
+          application/*+xml:
+            schema:
+              $ref: '#/components/schemas/BalanceModel'
+      responses:
+        '200':
+          description: OK
+  /api/Admin/Transaction/GetAllTransaction:
+    get:
+      tags:
+        - Transaction
+      responses:
+        '200':
+          description: OK
+  /api/Admin/Transaction/RsaSignin:
+    get:
+      tags:
+        - Transaction
+      parameters:
+        - name: json
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            text/xml:
+              schema:
+                type: string
+  /api/Admin/Transaction/verify:
+    get:
+      tags:
+        - Transaction
+      parameters:
+        - name: json
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: boolean
+            application/json:
+              schema:
+                type: boolean
+            text/json:
+              schema:
+                type: boolean
+            application/xml:
+              schema:
+                type: boolean
+            text/xml:
+              schema:
+                type: boolean
+  /api/Admin/Transaction/CheckStatus:
+    post:
+      tags:
+        - Transaction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: integer
+              format: int32
+              default: 50
+          text/json:
+            schema:
+              type: integer
+              format: int32
+              default: 50
+          application/*+json:
+            schema:
+              type: integer
+              format: int32
+              default: 50
+          application/xml:
+            schema:
+              type: integer
+              format: int32
+              default: 50
+          text/xml:
+            schema:
+              type: integer
+              format: int32
+              default: 50
+          application/*+xml:
+            schema:
+              type: integer
+              format: int32
+              default: 50
+      responses:
+        '200':
+          description: OK
+  /WeatherForecast:
+    get:
+      tags:
+        - WeatherForecast
+      operationId: GetWeatherForecast
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    BalanceModel:
+      type: object
+      properties:
+        Username:
+          title: Username
+          type: string
+          nullable: true
+          xml:
+            name: Username
+        TotalAmount:
+          title: TotalAmount
+          type: number
+          format: double
+          xml:
+            name: TotalAmount
+      additionalProperties: false
+    LoginModel:
+      required:
+        - password
+        - username
+      type: object
+      properties:
+        Username:
+          title: Username
+          minLength: 1
+          type: string
+          xml:
+            name: Username
+        Password:
+          title: Password
+          minLength: 1
+          type: string
+          xml:
+            name: Password
+      additionalProperties: false
+    NoneToSome:
+      type: object
+      properties:
+        Id:
+          title: Id
+          type: integer
+          format: int32
+          xml:
+            name: Id
+        ObjectVal:
+          title: ObjectVal
+          nullable: true
+          xml:
+            name: ObjectVal
+      additionalProperties: false
+    OneToMany:
+      type: object
+      properties:
+        Id:
+          title: Id
+          type: integer
+          description: <example>123</example>
+          format: int32
+          xml:
+            name: Id
+        ObjectsList:
+          title: ObjectsList
+          maxItems: 3
+          minItems: 1
+          type: array
+          items: { }
+          nullable: true
+          xml:
+            name: ObjectsList
+        MyProperty:
+          title: MyProperty
+          maxLength: 100
+          type: string
+          description: This is my prop
+          nullable: true
+          xml:
+            name: MyProperty
+      additionalProperties: false
+    TestingRoort:
+      type: object
+      properties:
+        Id:
+          title: Id
+          type: string
+          description: Unique ID.
+          nullable: true
+          xml:
+            name: Id
+          example: b521fb69-d6fc-4c20-83bf-46a3f391eb52
+        testinNAme:
+          title: testinNAme
+          type: array
+          items:
+            type: string
+          nullable: true
+          xml:
+            name: testinNAme
+      additionalProperties: false
+      description: For Testing XMl Model in Swagger
+    TransactionModel:
+      type: object
+      properties:
+        TrackingId:
+          title: TrackingId
+          type: string
+          nullable: true
+          xml:
+            name: TrackingId
+        Username:
+          title: Username
+          type: string
+          nullable: true
+          xml:
+            name: Username
+        Amount:
+          title: Amount
+          type: number
+          format: double
+          xml:
+            name: Amount
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: http
+      description: Testing my Security scheme
+      scheme: Bearer
+      bearerFormat: Bearer
+security:
+  - Bearer: [ ]

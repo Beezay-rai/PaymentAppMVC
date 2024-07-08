@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using PayementMVC.Data;
 using PayementMVC.Interfaces;
 using PayementMVC.Repository;
@@ -15,7 +16,7 @@ builder.Services.AddControllersWithViews();
 
 //Creating Logger
 var logger = new LoggerConfiguration()
-    .WriteTo.File("./Logs/log-.txt",rollingInterval:RollingInterval.Day)
+    .WriteTo.File("./Logs/log-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 builder.Services.AddDbContext<PaymentDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -28,7 +29,13 @@ builder.Services.AddHttpClient("myclient");
 //    .AddPolicyHandler(PollyPolicy.RetryPolicy(logger))
 //    .AddPolicyHandler(PollyPolicy.CircuitBreakPolicy(logger));
 builder.Services.AddScoped<DatabaseUtilities>();
-
+builder.Services.AddCors(config =>
+{
+    config.AddPolicy("AllowSpecificOrigin",
+            a => a.AllowAnyOrigin() // Replace with your API origin
+                              .AllowAnyHeader()
+                              .AllowAnyMethod());
+});
 var app = builder.Build();
 logger.Information("App Initialized !");
 
@@ -42,9 +49,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 
+app.UseCors("AllowSpecificOrigin"); // Enable CORS using the specified policy
 
 app.UseAuthorization();
 

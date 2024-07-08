@@ -1,0 +1,1001 @@
+﻿<div class="box " style="display:flex; gap:10px;">
+    <div class="card" style="width:50%;height:90vh">
+        <div class="card-body" id="editor">
+        </div>
+        <button type="button" class="btn btn-success" onclick="testingEditor()">Generate</button>
+        <form onsubmit="setCode()" method="post" action="Editor">
+            <input type="hidden" id="code" name="code" />
+            <input type="hidden" id="codeJson" name="codeJson" />
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+    <div class="card d-flex" style="width:50%;height:auto">
+        <div class="card-body">
+            <h5 id="apiTitle"></h5>
+            <div class="details-wrapper" style="display:flex;justify-content:space-between">
+                <div class="app-details">
+                    <button class="btn btn-secondary btn-xs" id="appVersion"></button>
+                    <button class="btn btn-success btn-xs" id="openApiVersion"></button>
+                    <p>
+                    </p>
+                </div>
+
+                <div class="authorize">
+                </div>
+            </div>
+
+            <div class="apis">
+                <div class="card">
+
+                    <div class="collapse" id="apibody">
+                        <div class="card-body" id="listofapi">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="schemas">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display:flex; justify-content:space-between">
+                            <h6>Schemas  </h6>
+                            <button type="button" class="btn btn-secondary" aria-controls="apibody" data-toggle="collapse" data-target="#schemasBody"><i class="fa fa-arrow-down"></i> </button>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="schemasBody">
+                        <div class="card-body" id="schemalist">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            @*
+            <div id="myval">
+
+            <textarea id="noice">mygod</textarea>
+            </div> *@
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JSON Schema Validator -->
+    @* <script src="https://cdn.jsdelivr.net/npm/ajv@8.13.0/dist/ajv.min.js"></script> *@
+    <script type="text/javascript">
+        var editor = CodeMirror(document.getElementById("editor"), {
+            lineNumbers: true,
+            mode: "yaml",
+            theme: "dracula",
+            gutters: ["CodeMirror-lint-markers"],
+            lint: true
+        });
+        editor.setSize("100%", "100%");
+        function setCode() {
+            $("#code").val(editor.getValue());
+            $("#codeJson").val(JSON.stringify( jsyaml.load( editor.getValue())));
+        }
+
+
+
+        function testingEditor() {
+            var tagswithvalue = [];
+            var jsonData = jsyaml.load(editor.getValue());
+
+            $("#apiTitle").html(jsonData.info.title)
+            $("#appVersion").html(jsonData.info.version)
+            $("#openApiVersion").html(jsonData.openapi)
+            // GetSchemaView();
+            $("#listofapi").html("");
+            // var validate = new Ajv();
+
+
+
+
+
+
+
+
+
+            // var testSchema = {
+            //     "type": "object",
+            //     "properties": {
+            //         "name": { "type": "string" },
+            //         "age": { "type": "number", "minimum": 0 }
+
+            //     }
+            // }
+            // var validate = ajv.compile(testSchema)
+            // var Isvalid = validate(jsonData);
+
+
+            //Generating Path from Json
+            $.each(jsonData.paths, function (endpoint, endpointBody) {
+                $.each(endpointBody, function (method, endpointData) {
+                    var paramHead = "";
+                    var parameterList = "";
+
+                    //Parameters for Endpoint
+                    if (endpointData.hasOwnProperty("parameters")) {
+                        paramHead = ` <tr>
+                                               <th>Name</th>
+                                               <th>Description</th>
+                                              </tr>`;
+                        $.each(endpointData.parameters, function (parameterIndex, parameterDetail) {
+                            parameterList += `<tr>
+                                                       <td>${parameterDetail.name}<br/>(${parameterDetail.in})</td>
+                                                       <td><input name="${parameterDetail.name}"  class="form-control"disabled placeholder="${parameterDetail.name}"/></td>
+                                                     </tr>`;
+                        });
+                    }
+                    else {
+                        paramHead = "<tr><th>No Parameters</th></tr>"
+                    }
+
+                    //Request Body for Endpoint
+                    var requestBodyHtml = "";
+                    if (endpointData.hasOwnProperty("requestBody")) {
+
+                        var exampleRequestBody = "";
+                        var schemaRequestBody = "";
+                        var contentDropdownOptions = "";
+                        $.each(endpointData.requestBody.content, function (contentName, contentValue) {
+                            contentDropdownOptions += `<option value="${contentName}" > ${contentName} </option>`;
+                            if (contentValue.schema.hasOwnProperty("$ref")) {
+
+                                var objFromPath = GenerateObjFromPath(jsonData, contentValue.schema.$ref);
+                                var objFromNested = checkNestedObject(jsonData, objFromPath)
+
+                                var requestbodyJSON = {};
+                                $.each(objFromPath, function (modelName, modelDetails) {
+                                    $.each(modelDetails.properties, function (propnName, propValue) {
+                                        if (propValue.hasOwnProperty('type')) {
+
+                                            switch (propValue.type) {
+                                                case "integer":
+                                                    requestbodyJSON[propnName] = 0;
+                                                    break;
+                                                case "string":
+                                                    requestbodyJSON[propnName] = "string";
+                                                    break;
+                                                case "number":
+                                                    requestbodyJSON[propnName] = 0;
+                                                    break;
+                                                case "array":
+                                                    requestbodyJSON[propnName] = [];
+                                                    break;
+
+
+                                            }
+                                        }
+                                        if (propValue.hasOwnProperty("$ref")) {
+                                            requestbodyJSON[propnName] = RecursiveRequestBody(jsonData, propValue.$ref);
+                                        }
+
+
+
+                                    })
+                                })
+
+                                //Schema for examplerequestBody
+                                exampleRequestBody = JSON.stringify(requestbodyJSON, null, 2);
+
+                                var schemaJsonForRequestBody = ReplaceRefWithActualObject(jsonData, objFromPath);
+
+                                schemaRequestBody = JSON.stringify(schemaJsonForRequestBody, null, 2);
+
+                            }
+                            else {
+                                if (contentValue.schema.hasOwnProperty('default')) {
+
+                                    if (contentValue.schema.type === 'string') {
+
+                                        exampleRequestBody = '"' + contentValue.schema.default + '"';
+                                    }
+                                    else {
+
+                                        exampleRequestBody = contentValue.schema.default;
+
+                                    }
+                                    schemaRequestBody = contentValue.schema.type;
+                                }
+                                else {
+                                    if (contentValue.schema.type === 'string') {
+
+                                        exampleRequestBody = '"' + contentValue.schema.type + '"';
+                                    }
+                                    else {
+
+                                        exampleRequestBody = contentValue.schema.type;
+
+                                    }
+                                    schemaRequestBody = contentValue.schema.type;
+
+                                }
+                            }
+                        });
+
+                        requestBodyHtml = `<div class="card">
+                                                    <div class="card-header">
+                                                                                Request Body
+
+                                                                            </div>
+                                                                            <div class="card-body">
+                                                                                <div class="wrapper" style="display:flex; justify-content:space-between">
+                                                                                    <div class="listForExampleSchema" >
+                                                                                       <ul class="tab" style="display:flex" >
+                                                                                         <li class="tabitem "style="list-style-type:none;" ><button class="btn text-white p-0" type="button"onClick="toggleExampleSchema(this,false)"> Example  |</button></li>
+                                                                                         <li class="tabitem "style="list-style-type:none;" ><button class="btn text-white p-0" type="button" onClick="toggleExampleSchema(this,true)">Schema</button> </li>
+                                                                                       </ul>
+                                                                                     </div>
+
+                                                                                       <div class="dropdownOptions">
+                                                                                                <select class="form-control requestBodyMediaType">
+                                                                                                ${contentDropdownOptions}
+                                                                                        </select>
+                                                                                       </div>
+                                                                                </div>
+
+
+                                                                               <div class="Example">
+
+                                                                                   <textarea class="code-json">${exampleRequestBody}</textarea>
+                                                                               </div>
+                                                                               <div class="Schema" style="display:none">
+                                                                                    <textarea  class="code-json">${schemaRequestBody}</textarea>
+                                                                               </div>
+                                                                            </div>
+
+
+                                                                      </div>`;
+
+
+                    }
+
+                    // Reponses for Endpoint
+                    var responseHtml = "";
+                    $.each(endpointData.responses, function (statuscode, details) {
+                        var responseBodyHtml = "";
+                        var responseMediaTypeDropDownOptions = "";
+                        if (details.hasOwnProperty("content")) {
+
+                            var objfromRef = {};
+                            var convertedToAccContentType;
+
+
+                            $.each(details.content, function (mediaTypeName, mediaTypeDetails) {
+                                if (mediaTypeDetails.schema.hasOwnProperty('$ref')) {
+                                    objfromRef = GenerateObjFromPath(jsonData, mediaTypeDetails.schema.$ref);
+
+                                    switch (mediaTypeName) {
+
+
+                                        case "application/json":
+                                            convertedToAccContentType = JSON.stringify(objfromRef, null, 2);
+                                            break;
+                                        case "application/xml":
+                                            convertedToAccContentType = ConvertJsonToXML(objfromRef);
+                                            break;
+
+
+
+                                    }
+
+                                }
+                                else {
+                                    convertedToAccContentType = mediaTypeDetails.schema.type;
+                                }
+                                responseMediaTypeDropDownOptions += `<option value="${mediaTypeName}" selected>${mediaTypeName}</option> `;
+                            })
+                            responseBodyHtml = `<div class="card">
+                                                                                    <div class="card-header">
+                                                                                        <label class='control-label'>Media Type</label>
+                                                                                        <select class='form-control' onchange="mediatypechange(this)">
+                                                                                            ${responseMediaTypeDropDownOptions}
+                                                                                         </select>
+
+                                                                                    </div>
+                                                                                    <div class="card-body">
+                                                                                        <textarea class='code'>${convertedToAccContentType}</textarea>
+                                                                                    </div>
+                                                                                 </div> `;
+                        }
+
+
+                        responseHtml += `<tr>
+                                                                    <td>${statuscode}</td>
+                                                                    <td>${details.description}${responseBodyHtml}</td>
+                                                                 </tr>`;
+                    })
+
+
+                    var methodClassName = "";
+                    switch (method.toUpperCase()) {
+                        case "GET":
+                            methodClassName = "btn btn-success";
+                            break;
+                        case "POST":
+                            methodClassName = "btn btn-primary";
+                            break;
+                        case "PUT":
+                            methodClassName = "btn btn-warning";
+                            break;
+                        case "PATCH":
+                            methodClassName = "btn btn-warning";
+                            break;
+                        case "DELETE":
+                            methodClassName = "btn btn-danger";
+                            break;
+                    }
+
+                    var listofApis = `<div class="card p-2" style="border:silver dotted 1px;">
+                                                               <div class="card-header d-flex p-0" style="border:silver solid 1px;">
+                                                                   <button type="button" class="btn" onclick="openCardCollapse(this)">
+                                                                       <span class="${methodClassName}">${method.toUpperCase()}</span>
+                                                                       <span class="path text-white">${endpoint}</span>
+                                                                   </button>
+                                                               </div>
+                                                               <div class="collapse">
+                                                                   <div class="card-body">
+                                                                    <table class="table ">
+                                                                      <thead>
+                                                                           ${paramHead}
+
+                                                                           <button style="float:right;" type="button" class="btn btn-outline-secondary" onclick="openExecutionBtns(this)" >Try it out</button>
+                                                                      </thead>
+                                                                      <tbody>
+                                                                          ${parameterList}
+
+
+
+                                                                      </tbody>
+                                                                    </table>
+
+                                                                   </div>
+
+                                                                   <!-- Request Body -->
+                                                                             ${requestBodyHtml}
+
+                                                                      <div class="exectuion-btns" style="display:none;width:100%">
+                                                                         <button type="button" style="width:100%" class='btn btn-primary execute'onclick="executeApi(this,'${endpoint}','${method.toUpperCase()}')" >Execute</button>
+                                                                         <button type="button"style="width:40%;display:none; " onclick="clearExecutionApi(this)"   class='btn btn-outline-secondary clear'>Clear</button>
+                                                                      </div>
+                                                                   <!-- Request Body End  -->
+                                                                    <div class='executionapiResponse'>
+                                                                    </div>
+                                                                   <!-- Response Body -->
+                                                                   <div class="card">
+                                                                     <div class="card-header">
+                                                                         Responses
+                                                                     </div>
+                                                                     <div class="card-body">
+                                                                          <table class="table ">
+                                                                               <thead>
+                                                                                   <tr>
+                                                                                       <th>Code</th>
+                                                                                       <th>Description</th>
+                                                                                   </tr>
+                                                                               </thead>
+                                                                           <tbody>
+                                                                               ${responseHtml}
+
+                                                                           </tbody>
+                                                                         </table>
+                                                                     </div>
+                                                                   </div>
+                                                                   <!-- Response Body End  -->
+
+                                                               </div>
+                                                              </div>`;
+
+                    var tag = `<div class="card">
+                                                                    <div class="card-header">
+                                                                        <div style="display:flex; justify-content:space-between">
+                                                                            <h6>${endpointData.tags[0]}</h6>
+                                                                            <button type="button" class="btn btn-secondary" onclick="openCardCollapse(this)"><i class="fa fa-arrow-down"></i></button>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="collapse">
+                                                                                <div class="card-body" id="listofapi">`;
+
+                    var api = { tagName: endpointData.tags[0], tag: tag, listofApis: listofApis };
+
+                    var existingTag = tagswithvalue.find(item => item.tagName === api.tagName);
+                    if (existingTag) {
+                        existingTag.listofApis += api.listofApis;
+                    } else {
+                        tagswithvalue.push(api);
+                    }
+                });
+            });
+
+            //Generating Schema from JSON
+            var schema = "";
+            $.each(jsonData.components.schemas, function (modelName, modelDetails) {
+                var myschemaprop = "";
+
+                //For Model Properties
+                $.each(modelDetails.properties, function (prop, propvalue) {
+                    myschemaprop += `<tr><td width='5%'>${prop}</td><td><div class="card"><div class="card-body">`;
+                    $.each(propvalue, function (nestedpro, nestedpropval) {
+                        if (nestedpro === "$ref") {
+                            var nestedpropsforhtml = "";
+                            var extractedObj = GenerateObjFromPath(jsonData, nestedpropval);
+
+                            var replacedObj = ReplaceRefWithActualObject(jsonData, extractedObj);
+
+                            const keys = Object.keys(extractedObj);
+
+                            const firstKey = keys[0];
+                            extractedObj[firstKey] = replacedObj;
+                            myschemaprop += GenerateSchemaViewFromJson(extractedObj);
+                            myschemaprop += nestedpropsforhtml;
+
+
+                        }
+                        else {
+                            (nestedpro === 'type') ? myschemaprop += `${nestedpropval}<br/>` : myschemaprop += `${nestedpro}: ${nestedpropval}<br/>`;
+                        }
+
+
+
+                    })
+                    myschemaprop += `</div></div> </td></tr>`
+                })
+
+                schema += ` <div class="card" style="border:dotted silver 1px"  >
+                                                                    <div class="card-header">
+                                                                            <button type="button" class="btn text-white " onclick="openCardCollapse(this)">${modelName}</button>
+                                                                        <div class="collapse">
+                                                                          <table class="table " >
+                                                                             <tbody>
+                                                                             ${myschemaprop}
+                                                                              </tbody>
+
+                                                                          </table>
+                                                                        </div>
+
+
+                                                                </div>
+                                                            </div>`;
+
+            })
+            $("#schemalist").html(schema);
+
+            //For Security Schemes
+            var authorizeSection = "";
+            if (jsonData.components.hasOwnProperty("securitySchemes")) {
+                authorizeSection = `
+                                                    <button class="btn btn-outline-success" data-toggle="modal" data-target="#authroizeModal">Authorize <i class="fa fa-lock"></i>  </button>
+                                                    <div class="modal fade" id="authroizeModal">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Available authorizations</h5>
+                                                                </div>
+                                                        <div class="modal-body">`;
+                var authorizebodysection = ``;
+
+
+                var securitySchemesObjects = jsonData.components.securitySchemes;
+
+                for (let authorizeprop in securitySchemesObjects) {
+
+                    if (typeof securitySchemesObjects[authorizeprop] === 'object') {
+                        for (let props in securitySchemesObjects[authorizeprop]) {
+                            (props === 'type') ? authorizebodysection += `<p>${authorizeprop} (${securitySchemesObjects[authorizeprop][props]})</p>` : authorizebodysection += `<p>${props}: ${securitySchemesObjects[authorizeprop][props]}</p>`;
+                            if (props === 'scheme') { localStorage.setItem("scheme", securitySchemesObjects[authorizeprop][props]) }
+                        }
+                    }
+
+                }
+                authorizeSection += authorizebodysection + `<p>
+                                                                <label class="control-label">Value</label>
+                                                                <input class="form-control" id="apiKeyValue" required />
+                                                            </p> <div>
+                                                                <button type="button"  class="btn btn-success" onclick="setApiKeyValue(this)">Authorize</button>
+                                                                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#authroizeModal">Cancel</button>
+                                                            </div>
+                                                        </div>`;
+            }
+            $(".authorize").html(authorizeSection);
+            //For api  Views
+            $(".apis").html("")
+            tagswithvalue.forEach(function (item) {
+
+                $(".apis").append(item.tag + item.listofApis + "</div></div>");
+            });
+            CodeEditorForClasses();
+        }
+        function openCardCollapse(e) {
+            $(e).closest('.card').find('.collapse').first().collapse('toggle');
+        }
+
+
+
+
+        function checkNestedObject(parentJson, json) {
+            var arrayOfNestedObj = [];
+
+            $.each(json, function (prop, propvalue) {
+
+                $.each(propvalue.properties, function (prop1, prop1value) {
+
+                    if (prop1value.hasOwnProperty("$ref")) {
+
+                        var nestedObjFromPath = GenerateObjFromPath(parentJson, prop1value["$ref"]);
+                        var nestedObjs = checkNestedObject(parentJson, nestedObjFromPath);
+                        nestedObjs.forEach((item) => arrayOfNestedObj.push(item));
+                    }
+                })
+
+
+
+            })
+
+            arrayOfNestedObj.push(json);
+            return arrayOfNestedObj;
+        }
+
+        function GenerateObjFromPath(json, path) {
+
+            var test = path.replace("#/", "");
+            var a = test.split('/');
+            var modelName = a[a.length - 1];
+            var currentObj = json;
+            for (var i = 0; i < a.length; i++) {
+                if (typeof currentObj === 'object' && currentObj !== null && currentObj.hasOwnProperty(a[i])) {
+                    currentObj = currentObj[a[i]];
+                } else {
+                    return undefined;
+                }
+            }
+
+            var returnObj = {};
+            returnObj[modelName] = currentObj;
+            return returnObj;
+        }
+
+
+        function setApiKeyValue(e) {
+            var apiKeyInputBox = document.getElementById('apiKeyValue');
+
+            (apiKeyInputBox.style.display === 'none') ? apiKeyInputBox.style.display = 'block' : apiKeyInputBox.style.display = 'none';
+            (e.innerHTML === "Authorize") ? (e.innerHTML = "Log Out", e.className = 'btn btn-outline-secondary') : (e.innerHTML = "Authorize", e.className = 'btn btn-success');
+
+
+
+
+        }
+
+
+
+
+        function GenerateSchemaViewFromJson(json) {
+
+
+            let html = '<ul>';
+
+            for (const key in json) {
+                html += `<li><strong>${key}:</strong> `;
+
+                if (typeof json[key] === 'object' && json[key] !== null) {
+                    html += GenerateSchemaViewFromJson(json[key]);
+                } else {
+                    html += `${json[key]}</li>`;
+                }
+
+            }
+
+            html += '</ul>';
+
+            return html;
+        }
+
+
+
+
+        function GenerateViewFromJObjectProperties(jproperties) {
+            var view = "";
+
+            $.each(jproperties, function (nestedpropvalname, nestedpropvalues) {
+
+                view += `<span class="ml-3 " >${nestedpropvalname}: ${nestedpropvalues}<span><br/>`;
+
+            })
+            return view;
+        }
+
+        function GenerateViewFromJObject(jboject) {
+            var returnview = "";
+            $.each(jboject, function (modelname, modeldetails) {
+                returnview += `<div class="card" style="border:1px dotted silver;" ><div class="card-body">  ${modelname}<br/> <p class="ml-2">`;
+                $.each(modeldetails.properties, function (nestedprop, nestedpropval) {
+                    returnview += ` ${nestedprop} : <br/>`;
+                    returnview += GenerateViewFromJObjectProperties(nestedpropval);
+
+                })
+                returnview += "</p></div></div>"
+            })
+            return returnview;
+        }
+
+        function toggleExampleSchema(e, value) {
+            if (value) {
+                $(e).closest('.card').find('.Schema').show();
+                $(e).closest('.card').find('.Example').hide();
+            }
+            else {
+                $(e).closest('.card').find('.Example').show();
+                $(e).closest('.card').find('.Schema').hide();
+            }
+        }
+
+
+        function ExtractModelNameFromRef(path) {
+            var modelName = path.substring(path.lastIndexOf('/') + 1);
+            return modelName;
+        }
+
+
+
+
+
+        function RecursiveRequestBody(parentJsonData, path) {
+            var objFromPath = GenerateObjFromPath(parentJsonData, path);
+            var objFromNested = checkNestedObject(parentJsonData, objFromPath);
+
+            var requestbodyJSON = {};
+            $.each(objFromPath, function (modelName, modelDetails) {
+                $.each(modelDetails.properties, function (propnName, propValue) {
+                    if (propValue.hasOwnProperty('type')) {
+
+                        switch (propValue.type) {
+                            case "integer":
+                                requestbodyJSON[propnName] = 0;
+                                break;
+                            case "string":
+                                requestbodyJSON[propnName] = "string";
+                                break;
+                            case "number":
+                                requestbodyJSON[propnName] = 0;
+                                break;
+                            case "array":
+                                requestbodyJSON[propnName] = [];
+                                break;
+
+
+                        }
+                    }
+                    if (propValue.hasOwnProperty("$ref")) {
+                        var a = RecursiveRequestBody(parentJsonData, propValue.$ref);
+
+                        requestbodyJSON[propnName] = a;
+
+                    }
+
+
+
+                })
+            })
+            return requestbodyJSON;
+
+        }
+
+
+
+
+
+
+        function ConvertJsonToXML(object) {
+            var xmlObj = json2xml(object, { compact: true, spaces: 4 });
+            return xmlObj;
+        }
+
+
+
+
+
+
+
+
+
+        function ReplaceRefWithActualObject(parentObject, ObjectWithRef) {
+            var myReplacedObject = {};
+
+            $.each(ObjectWithRef, function (modelName, modelDetails) {
+
+                $.each(modelDetails.properties, function (propName, propDetailObj) {
+                    if (propDetailObj.hasOwnProperty("$ref")) {
+                        var objFromPath = GenerateObjFromPath(parentObject, propDetailObj.$ref);
+                        var extractedName = ExtractModelNameFromRef(propDetailObj.$ref);
+                        var recusivedObj = ReplaceRefWithActualObject(parentObject, objFromPath);
+                        myReplacedObject[propName] = {
+
+                            [extractedName]: recusivedObj
+                        };
+                    }
+                    else {
+                        myReplacedObject[propName] = propDetailObj
+
+                    }
+
+
+                })
+            })
+            return myReplacedObject;
+
+        }
+
+        function mediatypechange(e) {
+
+            var card = $(e).closest('.card');
+            var textArea = card.find('.code');
+            var objTobeChanged = textArea.val();
+            var contentType = $(e).val();
+            var changedObj = "";
+            var modeForEditor = "";
+
+            switch (contentType) {
+                case "application/json":
+                    changedObj = xml2json(objTobeChanged, { compact: true, spaces: 2 });
+                    modeForEditor = "application/json";
+                    break;
+
+                case "application/xml":
+                    changedObj = ConvertJsonToXML(objTobeChanged);
+                    modeForEditor = "xml";
+                    break;
+
+
+            }
+            var check = textArea[0].hasOwnProperty('CodeMirrorInstance');
+            if (check) {
+
+                var editor = textArea[0].CodeMirrorInstance;
+                editor.setValue(changedObj);
+                editor.setOption("mode", modeForEditor);
+                textArea.val(changedObj);
+            }
+        }
+
+
+
+
+
+        function openExecutionBtns(e) {
+            var a = $(e).closest('.collapse').find('.exectuion-btns');
+            var closestCollapse = e.closest('.collapse');
+            var paramTable = closestCollapse.querySelector('.table');
+            var inputList = paramTable.querySelectorAll('input');
+            var requestBody = closestCollapse.querySelector('.Example textarea');
+            var editor;
+            if (requestBody !== null && requestBody.hasOwnProperty('CodeMirrorInstance')) {
+                editor = requestBody.CodeMirrorInstance;
+            }
+
+
+
+            a.toggle();
+            if ($(e).text() === 'Try it out') {
+                inputList.forEach((input) => input.disabled = false);
+                $(e).text('Cancel');
+                if (editor != undefined || editor != null) {
+                    editor.setOption('readOnly', false)
+                }
+            } else {
+                inputList.forEach((input) => {
+                    input.disabled = true;
+                    input.value = null;
+                });
+                if (editor != undefined || editor != null) editor.setOption('readOnly', false)
+                $(e).text('Try it out');
+            }
+            $(e).toggleClass('btn-outline-danger btn-outline-secondary');
+
+        }
+
+
+        function executeApi(e, apiRoute, method) {
+            $(e).closest('.exectuion-btns').find('.clear').show();
+            var closestCollapse = e.closest('.collapse');
+            var paramTable = closestCollapse.querySelector('.table');
+            $(e).css('width', '50%');
+
+            var inputList = paramTable.querySelectorAll('input');
+
+            var requestBodyMediaTypeHtml = closestCollapse.querySelector('.requestBodyMediaType');
+            var requestBodyHtml = closestCollapse.querySelector('.Example textarea');
+            var requestBodyMediaType = "";
+            var requestBodyVal;
+            if (requestBodyMediaTypeHtml !== null && requestBodyHtml !== null) {
+                requestBodyMediaType = requestBodyMediaTypeHtml.value;
+                requestBodyVal = requestBodyHtml.CodeMirrorInstance.getValue();
+            }
+
+            //Authentication Sector
+            var scheme = localStorage.getItem("scheme");
+            var token = $("#apiKeyValue").val();
+
+
+
+            var baseAddress = $("#baseAddress").val();
+            var queryParams = "";
+            if (inputList.length > 0) {
+                queryParams += '?'
+                for (let i = 0; i < inputList.length;) {
+                    var a = `${inputList[i].name}=${inputList[i].value}`;
+                    i++;
+                    if (i < inputList.length) {
+                        a += "&";
+                    }
+                    queryParams += a;
+                }
+            }
+            var urlWithqueryParam = baseAddress + apiRoute + queryParams;
+
+
+            var authorizeKeyValue = $("#apiKeyValue").val();
+            authorizeKeyValue = (authorizeKeyValue === undefined) ? "" : authorizeKeyValue;
+            //APi Execution
+            $.ajax({
+                url: "@Url.Action("ExecuteApi")",
+                data: { url: urlWithqueryParam, method: method, mediaType: requestBodyMediaType, data: requestBodyVal, scheme: scheme, token: token },
+                success: function (data) {
+                    var responseValue = "";
+                    var codeMirrormode;
+
+                    if (data.serverResponse.isSuccessStatusCode) {
+                        switch (data.contentType) {
+                            case "application/json":
+                            case "application/problem+json":
+                                var parsed = JSON.parse(data.responseValue.toString());
+                                responseValue = JSON.stringify(parsed, null, 2);
+                                codeMirrormode = data.contentType
+                                break;
+                            case "application/xml":
+                                codeMirrormode = data.contentType;
+                                responseValue = data.responseValue;
+                                break;
+                            default:
+                                // var parsed = JSON.parse(data.responseValue.toString());
+                                responseValue = data.responseValue.toString();
+                                codeMirrormode = "application/json";
+                                break;
+
+                        }
+
+                    }
+                    else {
+                        for (let i = 0; i < data.serverResponse.headers.length; i++) {
+                            responseValue += `${data.serverResponse.headers[i].key} : ${data.serverResponse.headers[i].value}\n `
+
+                        }
+                    }
+
+
+
+
+
+                    var responseHtmlAfterExecution = ` <!-- Response After Execution --!>
+                                                              <div class='card'>
+                                                                <div class='card-header'>
+                                                                    <h5>Response</h5>
+                                                                </div>
+                                                                <div class='card-body'>
+                                                                    <div class='row'>
+                                                                        <div class='col-md-12'>
+                                                                            Request URL
+                                                                                  <textarea class='code-requestUrl'>"${urlWithqueryParam}"
+                                                                          </textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <table class='table' >
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Code</th>
+                                                                                <th>Details</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                        <td width="10%">${data.serverResponse.statusCode}</td>
+                                                                                <td >
+                                                                                    <div class='executionApiRepsonse'>
+                                                                                        Response Body
+                                                                                                <textarea class='code-requestBody'>${responseValue}</textarea>
+                                                                                    </div>
+
+                                                                                      <div class='responseHeader'>
+                                                                                          Response headers
+                                                                                          <textarea class='code-responseHeader'>
+                                                                                          </textarea>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                              </div>
+                                                              <!-- Response After Execution End --!>`;
+
+                    $(e).closest('.collapse').find('.executionapiResponse').html("").append(responseHtmlAfterExecution);
+
+                    var responseHeader = document.querySelectorAll(".code-responseHeader");
+                    responseHeader.forEach((item) => {
+
+                        if (item.CodeMirrorInstance === undefined) {
+                            var editor = CodeMirror.fromTextArea(item, {
+                                lineNumbers: false,
+                                readOnly: true,
+                                theme: "dracula"
+                            });
+                            editor.setSize("100%", "60px")
+                            item.CodeMirrorInstance = JSON.stringify(editor.getValue());
+                        }
+
+
+                    });
+                    var requestUrl = document.querySelectorAll(".code-requestUrl");
+                    requestUrl.forEach((item) => {
+                        if (item.CodeMirrorInstance === undefined) {
+
+                            var editor = CodeMirror.fromTextArea(item, {
+                                lineNumbers: false,
+                                readOnly: "nocursor",
+                                fixedGutter: true,
+                                scrollbarStyle: null,
+                                theme: "dracula"
+                            });
+                            editor.setSize("100%", "30px")
+                            item.CodeMirrorInstance = JSON.stringify(editor.getValue());
+                        }
+                    });
+                    var requestBody = document.querySelectorAll(".code-requestBody");
+                    requestBody.forEach((item) => {
+                        if (item.CodeMirrorInstance === undefined) {
+
+                            var editor = CodeMirror.fromTextArea(item, {
+                                lineNumbers: false,
+                                mode: codeMirrormode,
+                                lineWrapping: true,
+                                readOnly: "nocursor",
+                                theme: "dracula"
+                                // mode:"application/json"
+                            });
+                            item.CodeMirrorInstance = JSON.stringify(editor.getValue());
+                        }
+                    });
+
+                },
+                Error: function () {
+                    alert("failed")
+                }
+            })
+
+        }
+
+        function clearExecutionApi(e) {
+            $(e).closest('.exectuion-btns').find('.execute').css('width', '100%');
+            var a = $(e).closest('.collapse').find('.executionapiResponse').html("");
+
+            var check = e.closest('.collapse').querySelector('.Example textarea');
+            if (check != null) {
+                var editor = check.CodeMirrorInstance;
+                editor.setOption('readOnly', "nocursor");
+
+            }
+
+
+
+            $(e).hide();
+        }
+
+
+    </script>
+}
